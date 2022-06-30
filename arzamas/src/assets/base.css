@@ -1,0 +1,13 @@
+:root {
+    --main-color: #000;
+    --pale-main-color: rgba(0,0,0,0.2);
+    --font-pt: 'Frank Ruhl Libre', sans-serif;
+    --font-mont: 'Montserrat', sans-serif;
+    --main-text-size: 1em;
+    --small-text-size: .875em;
+    --link-color: #1000ff;
+}
+
+* {
+    box-sizing: border-box;
+}
