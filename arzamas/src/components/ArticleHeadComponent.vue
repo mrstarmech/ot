@@ -1,7 +1,4 @@
-<script setup lang="ts">
-import SocialBlockComponent from "./SocialBlockComponent.vue";
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <header class="article-head">

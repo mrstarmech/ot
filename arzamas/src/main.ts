@@ -20,7 +20,7 @@ if (typeof window.lmt_config === "undefined") {
     product_name: "Procardi",
     product_image: product,
     offer_link: "https://example.com",
-    modal_shown: false
+    modal_shown: false,
   };
 }
 
@@ -36,15 +36,13 @@ if (typeof window.lmt_config.modal_shown === "undefined") {
   window.lmt_config.modal_shown = false;
 }
 
-window.addEventListener('blur', ()=>{
-  
-  (document.querySelector('#fvc') as HTMLLinkElement).href = 'favicon2.jpg';
-})
+window.addEventListener("blur", () => {
+  (document.querySelector("#fvc") as HTMLLinkElement).href = "favicon2.jpg";
+});
 
-window.addEventListener('focus', ()=>{
-  
-  (document.querySelector('#fvc') as HTMLLinkElement).href = 'favicon.jpg';
-})
+window.addEventListener("focus", () => {
+  (document.querySelector("#fvc") as HTMLLinkElement).href = "favicon.jpg";
+});
 
 const app = createApp(App);
 

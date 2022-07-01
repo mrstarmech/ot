@@ -1,19 +1,15 @@
 <script setup lang="ts">
-import comm1 from "@/assets/1.jpg";
 import comm2 from "@/assets/2.jpg";
 import comm3 from "@/assets/3.jpg";
-import comm4 from "@/assets/4.jpg";
 import comm5 from "@/assets/5.jpg";
-import comm6 from "@/assets/6.jpg";
 import comm7 from "@/assets/7.jpg";
-import comm8 from "@/assets/8.jpg";
 import comm_u from "@/assets/comm_u.jpg";
 import { onMounted, reactive } from "vue";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faArrowsSpin } from "@fortawesome/free-solid-svg-icons";
 library.add(faArrowsSpin);
-const emit = defineEmits(['show_form']);
+const emit = defineEmits(["show_form"]);
 const loader = reactive({ state: true });
 const product_name = window.lmt_config.product_name;
 onMounted(() => {
@@ -32,9 +28,6 @@ onMounted(() => {
     if (el !== null) observer2.observe(el);
   }, 1000);
 });
-function go_offer() {
-  window.location.href = window.lmt_config.offer_link;
-}
 </script>
 
 <template>
@@ -129,7 +122,9 @@ function go_offer() {
           lo antes posible.
         </p>
       </div>
-      <button @click="emit('show_form')" class="order-btn">CÓMPRELO AHORA</button>
+      <button @click="emit('show_form')" class="order-btn">
+        CÓMPRELO AHORA
+      </button>
     </div>
   </div>
 </template>

@@ -2,7 +2,7 @@
 import ArticleHeadComponent from "./ArticleHeadComponent.vue";
 import ArticleContentComponent from "./ArticleContentComponent.vue";
 import FormComponent from "./FormComponent.vue";
-const emit = defineEmits(['show_fomr']);
+const emit = defineEmits(["show_fomr"]);
 </script>
 
 <template>

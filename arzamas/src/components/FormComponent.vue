@@ -48,17 +48,13 @@ onMounted(() => {
   }, 1000);
 });
 
-function go_offer() {
-  window.location.href = window.lmt_config.offer_link;
-}
-
-const emit = defineEmits(['show_form']);
-const btn_click = function(){
-  emit('show_form');
-}
+const emit = defineEmits(["show_form"]);
+const btn_click = function () {
+  emit("show_form");
+};
 </script>
 <template>
-<div id="scroll-anchor-form"></div>
+  <div id="scroll-anchor-form"></div>
   <div class="order-form">
     <div class="product-image">
       <img :src="product_image" alt="product" />

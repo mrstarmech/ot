@@ -5,7 +5,7 @@ import PopUpComponent from "./components/PopUpComponent.vue";
 import CommentsComponent from "./components/CommentsComponent.vue";
 import OrderFormModal from "./components/OrderFormModal.vue";
 import { reactive } from "vue";
-const modal_shown = reactive({state:false});
+const modal_shown = reactive({ state: false });
 function close() {
   modal_shown.state = false;
   window.lmt_config.modal_shown = false;

@@ -24,11 +24,11 @@ setTimeout(() => {
 <template>
   <div class="popup" :class="{ inactive: !shown.state, active: shown.state }">
     <div class="action">
-      <p class="call">
-        ¡Tu receta está aprobada!
-      </p>
+      <p class="call">¡Tu receta está aprobada!</p>
       <p @click="go" class="link">
-        <span class="link-link">¡Haga clic aquí para recoger con descuento!</span>
+        <span class="link-link"
+          >¡Haga clic aquí para recoger con descuento!</span
+        >
       </p>
     </div>
     <div class="close" @click="close">
