@@ -139,18 +139,26 @@ onMounted(() => {
 }
 
 .order-btn {
-  font-size: 120%;
-  text-align: center;
-  color: #fff !important;
-  background-color: red;
-  display: table;
-  margin: 25px auto;
-  width: 400px;
+  background: red;
+  border-radius: 200px;
+  border: 0;
+  color: #fff;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 24px;
+  width: 300px;
+  margin-top: 20px;
+  margin-bottom: 30px;
   max-width: 100%;
-  border-radius: 15px;
-  text-decoration: none;
-  padding: 15px;
-  font-family: var(--font-mont);
+  padding: 15px 10px;
+  display: block;
+  cursor: pointer;
+  box-shadow: 0 5px 6px #958b6b;
+  margin: 20px auto;
+
+  @media screen and (max-width: 655px) {
+    margin: 5px auto 55px;
+  }
 }
 
 .ittem-comment {

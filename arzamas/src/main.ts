@@ -12,6 +12,13 @@ declare global {
       product_image: string;
       offer_link: string;
       modal_shown: boolean;
+      name_pattern: RegExp;
+      tel_pattern: RegExp;
+      form_params: object;
+      validity: {
+        tel_error:'',
+        name_error: ''
+      };
     };
   }
 }
@@ -21,6 +28,13 @@ if (typeof window.lmt_config === "undefined") {
     product_image: product,
     offer_link: "https://example.com",
     modal_shown: false,
+    name_pattern: /.*/,
+    tel_pattern: /.*/,
+    form_params: {},
+    validity: {
+      tel_error: '',
+      name_error: ''
+    }
   };
 }
 

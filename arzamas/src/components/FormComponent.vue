@@ -5,20 +5,19 @@ import { faArrowsSpin } from "@fortawesome/free-solid-svg-icons";
 import { onMounted, reactive } from "vue";
 library.add(faArrowsSpin);
 const product_image = window.lmt_config.product_image;
-const product_name = window.lmt_config.product_name;
+// const product_name = window.lmt_config.product_name;
 const timer = {
   isLoading: true,
-  initialTime: 100800,
+  initialTime: 1500,
   time: function (pass: number) {
     this.initialTime -= pass;
     const curr = this.initialTime - pass;
     if (curr <= 0) return "0 días 0 horas 0 minutos";
-    const d = (curr / 86400).toFixed();
-    const h = Math.floor((curr % 86400) / 3600);
+    // const d = (curr / 86400).toFixed();
+    // const h = Math.floor((curr % 86400) / 3600);
     const m = Math.floor(((curr % 86400) % 3600) / 60);
-    return `${d} día ${h} ${h > 1 ? "horas" : "hora"} ${m} ${
-      m > 1 ? "minutos" : "minuto"
-    }`;
+    const s = Math.floor(((curr % 86400) % 3600) % 60);
+    return `${m < 10 ? "0" : ""}${m}:${s < 10 ? "0" : ""}${s}`;
   },
 };
 const timer_react = reactive(timer);
@@ -68,12 +67,12 @@ const btn_click = function () {
       Cómprelo a un precio promocional antes de que esta oferta pase al próximo
       lector!
     </p>
-    <button @click="btn_click" class="order-btn">
-      Compre {{ product_name }} con un 50% de descuento
+    <button @click="btn_click" class="order-form-btn">
+      Compre con un 50% de descuento
     </button>
     <p ref="timer_block" id="timer" class="timer">
       <span class="timer-text">
-        ¡Tenga en cuenta! La promoción especial solo es válida hasta:
+        ¡Tenga en cuenta! La oferta especial es válida mientras dure:
       </span>
       &nbsp;&nbsp;&nbsp;&nbsp;
       <span class="timer-loading" :class="{ hidden: !timer_react.isLoading }">
@@ -118,17 +117,20 @@ const btn_click = function () {
       vertical-align: -0.125em;
     }
   }
+
   .timer-time {
     display: block;
-    color: red;
+    color: #ff8484;
     font-weight: 700;
     font-size: 1.5em;
   }
 }
+
 #scroll-anchor-form {
   height: 20px;
   width: 100%;
 }
+
 .order-form {
   max-width: 600px;
   width: 100%;
@@ -174,11 +176,7 @@ const btn_click = function () {
     line-height: 1.3;
     transform: rotateZ(-7deg);
     margin: -0px auto 0;
-    background: linear-gradient(
-      to right,
-      rgb(238, 165, 19) 0%,
-      rgb(253, 237, 19) 100%
-    );
+    background: rgb(253, 237, 19);
     border-width: 2px;
     border-style: solid;
     border-color: rgb(255, 255, 255);
@@ -208,19 +206,27 @@ const btn_click = function () {
   }
 }
 
-.order-btn {
-  font-family: var(--font-pt);
+.order-form-btn {
+  background: red;
+  border-radius: 200px;
+  border: 0;
+  color: #fff;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 24px;
+  width: 300px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 100%;
+  padding: 15px 25px;
   display: block;
-  margin: 20px auto;
-  padding: 20px;
-  font-size: 20px;
-  text-decoration: none;
-  background-color: #de0606;
-  text-align: center;
-  color: #fff !important;
-  border-radius: 4px;
-  border: none;
   cursor: pointer;
-  max-width: 345px;
+  box-shadow: 0 5px 6px #958b6b;
+  margin: 20px auto;
+
+  @media screen and (max-width: 655px) {
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
 }
 </style>

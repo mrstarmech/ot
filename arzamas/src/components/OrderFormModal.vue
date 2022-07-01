@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { reactive } from 'vue';
 import banner_bg from "@/assets/bannerbg.jpg";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
@@ -8,15 +9,43 @@ const close = function () {
   emit("close");
 };
 const emit = defineEmits(["close"]);
-</script>
+const getParamFromConfig = function(name:string):string {
+  //@ts-ignore
+  return window.lmt_config.form_params[name];
+}
+const name_input = reactive({ val: '' });
+const tel_input = reactive({ val: '' });
+const validate_input = function (i_value: string, regex: RegExp) {
+  const match = i_value.match(regex);
+  return match && i_value === match[0];
+}
+const submit = function (event: Event) {
+  console.log('validating');
 
+  const form = event.target as HTMLFormElement;
+  const _name_input = (form.querySelector('#name') as HTMLInputElement);
+  const _tel_input = (form.querySelector('#phone') as HTMLInputElement);
+  if (!validate_input(name_input.val, window.lmt_config.name_pattern)) {
+    _name_input.setCustomValidity(window.lmt_config.validity.name_error);
+    _name_input.reportValidity();
+    return
+  }
+
+  if (!validate_input(tel_input.val, window.lmt_config.tel_pattern)) {
+    _tel_input.setCustomValidity(window.lmt_config.validity.tel_error);
+    _tel_input.reportValidity();
+    return
+  }
+
+  _name_input.setCustomValidity('');
+  _tel_input.setCustomValidity('');
+  form.submit();
+}
+</script>
 <template>
   <div class="form-modal-container" @click="close">
     <div class="modal-form" @click.stop>
-      <div
-        class="modal-form__banner"
-        :style="{ backgroundImage: `url(${banner_bg})` }"
-      >
+      <div class="modal-form__banner" :style="{ backgroundImage: `url(${banner_bg})` }">
         <div @click.prevent="close" class="modal-cross2">
           <font-awesome-icon icon="fa-solid fa-xmark" />
         </div>
@@ -27,7 +56,14 @@ const emit = defineEmits(["close"]);
           <p class="form-price-new">129000 cop</p>
         </div>
       </div>
-      <form action="/send/send_1.php" class="modal-form__form">
+      <form action="/send/send_1.php" @submit.prevent="submit" class="modal-form__form">
+        <input type="hidden" id="geo" name="geo" :value="getParamFromConfig('geo')">
+        <input type="hidden" id="flow_id" name="flow_id" :value="getParamFromConfig('flow_id')">
+        <input type="hidden" id="sub1" name="sub1" :value="getParamFromConfig('sub1')">
+        <input type="hidden" id="sub2" name="sub2" :value="getParamFromConfig('sub2')">
+        <input type="hidden" id="sub3" name="sub3" :value="getParamFromConfig('sub3')">
+        <input type="hidden" id="sub4" name="sub4" :value="getParamFromConfig('sub4')">
+        <input type="hidden" id="sub5" name="sub5" :value="getParamFromConfig('sub5')">
         <div @click.prevent="close" class="modal-cross1">
           <font-awesome-icon icon="fa-solid fa-xmark" />
         </div>
@@ -36,14 +72,11 @@ const emit = defineEmits(["close"]);
           partir de dos latas). Deje sus datos de contacto en el siguiente
           formulario:
         </p>
-        <input type="text" name="name" id="name" placeholder="Su nombre:" />
-        <input
-          type="tel"
-          name="phone"
-          id="phone"
-          placeholder="Su número de teléfono:"
-        />
-        <button type="button" class="submit-btn">PEDIR >></button>
+        <input :value="name_input.val" @input="event => name_input.val = (event.target as HTMLInputElement).value"
+          type="text" name="name" id="name" placeholder="Su nombre:" required />
+        <input :value="tel_input.val" @input="event => tel_input.val = (event.target as HTMLInputElement).value"
+          type="tel" name="phone" id="phone" placeholder="Su número de teléfono:" required />
+        <button type="submit" class="submit-btn">PEDIR >></button>
         <p class="form-note-b">
           Las solicitudes se aceptan y tramitan las 24 horas del día, los 7 días
           de la semana. El descuento sólo es válido para pedidos de 2 paquetes o
@@ -72,6 +105,7 @@ const emit = defineEmits(["close"]);
 }
 
 @keyframes flash {
+
   0%,
   50%,
   100% {
@@ -107,12 +141,13 @@ const emit = defineEmits(["close"]);
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: var(--pale-main-color);
+  background-color: rgba($color: #000000, $alpha: 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Arial Black", "Roboto";
   padding: 10px;
+  z-index: 999;
 
   .modal-form {
     display: flex;
@@ -150,6 +185,7 @@ const emit = defineEmits(["close"]);
         font-weight: 900;
         margin: 0;
         line-height: 113px;
+        color: #f1ff51;
 
         @media screen and (max-width: 970px) {
           font-size: 60px;
@@ -308,6 +344,7 @@ const emit = defineEmits(["close"]);
         cursor: pointer;
         animation: flash 1s ease-in-out 1.2s;
         box-shadow: 0 5px 6px #444;
+
         @media screen and (max-width: 655px) {
           margin-top: 5px;
           margin-bottom: 15px;
@@ -332,7 +369,7 @@ const emit = defineEmits(["close"]);
     &__banner-overlay {
       width: 100%;
       height: 100%;
-      background: linear-gradient(180deg, #fb3333d8 0%, #120fd8ee 100%);
+      background: linear-gradient(180deg, #e30000c4 0%, #fb3333d8 100%);
       padding: 1px;
       display: flex;
       justify-content: center;

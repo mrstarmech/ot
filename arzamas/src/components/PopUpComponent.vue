@@ -44,7 +44,7 @@ setTimeout(() => {
   width: 100%;
   background: #ffde42;
   display: flex;
-  padding: 5px;
+  padding: 20px 5px 20px 20px;
   align-items: center;
   justify-content: space-between;
   .close {
