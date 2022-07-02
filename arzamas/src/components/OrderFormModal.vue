@@ -22,7 +22,7 @@ const validate_input = function (i_value: string, regex: RegExp) {
 const submit = function (event: Event) {
   console.log('validating');
 
-  const form = event.target as HTMLFormElement;
+  const form = document.querySelector('#order-form-modal') as HTMLFormElement;
   const _name_input = (form.querySelector('#name') as HTMLInputElement);
   const _tel_input = (form.querySelector('#phone') as HTMLInputElement);
   if (!validate_input(name_input.val, window.lmt_config.name_pattern)) {
@@ -41,6 +41,20 @@ const submit = function (event: Event) {
   _tel_input.setCustomValidity('');
   form.submit();
 }
+
+const name_input_handler = function(event: Event) {
+  const _name_input = (event.target as HTMLInputElement);
+  name_input.val = _name_input.value;
+  _name_input.setCustomValidity('');
+  _name_input.reportValidity();
+}
+
+const tel_input_handler = function(event: Event) {
+  const _tel_input = (event.target as HTMLInputElement);
+  tel_input.val = _tel_input.value;
+  _tel_input.setCustomValidity('');
+  _tel_input.reportValidity();
+}
 </script>
 <template>
   <div class="form-modal-container" @click="close">
@@ -56,7 +70,7 @@ const submit = function (event: Event) {
           <p class="form-price-new">129000 cop</p>
         </div>
       </div>
-      <form action="/send/send_1.php" @submit.prevent="submit" class="modal-form__form">
+      <form id="order-form-modal" action="/send/send_1.php" class="modal-form__form">
         <input type="hidden" id="geo" name="geo" :value="getParamFromConfig('geo')">
         <input type="hidden" id="flow_id" name="flow_id" :value="getParamFromConfig('flow_id')">
         <input type="hidden" id="sub1" name="sub1" :value="getParamFromConfig('sub1')">
@@ -72,11 +86,11 @@ const submit = function (event: Event) {
           partir de dos latas). Deje sus datos de contacto en el siguiente
           formulario:
         </p>
-        <input :value="name_input.val" @input="event => name_input.val = (event.target as HTMLInputElement).value"
+        <input :value="name_input.val" @input="name_input_handler"
           type="text" name="name" id="name" placeholder="Su nombre:" required />
-        <input :value="tel_input.val" @input="event => tel_input.val = (event.target as HTMLInputElement).value"
+        <input :value="tel_input.val" @input="tel_input_handler"
           type="tel" name="phone" id="phone" placeholder="Su número de teléfono:" required />
-        <button type="submit" class="submit-btn">PEDIR >></button>
+        <button type="submit" @click.prevent="submit" class="submit-btn">PEDIR >></button>
         <p class="form-note-b">
           Las solicitudes se aceptan y tramitan las 24 horas del día, los 7 días
           de la semana. El descuento sólo es válido para pedidos de 2 paquetes o
