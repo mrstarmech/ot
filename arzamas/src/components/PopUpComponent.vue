@@ -59,7 +59,7 @@ setTimeout(() => {
   .call,
   .link {
     margin: 0;
-    font-family: var(--font-pt);
+    font-family: var(--font-mont);
     font-size: 16px;
   }
   .link-link {
