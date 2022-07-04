@@ -7,9 +7,16 @@ import teacup from '@/assets/teacup-1.jpg';
 import botl1 from '@/assets/procardi-1.jpg';
 import frame_silver from '@/assets/frame_silver.svg';
 import frame_gold from '@/assets/frame_gold.svg';
-import frame_diamond from '@/assets/frame_silver.svg';
+import frame_diamond from '@/assets/frame_diamond.svg';
 import UpvoteIcon from './icons/UpvoteIcon.vue';
 import DownvoteIcon from './icons/DownvoteIcon.vue';
+import f45 from '@/assets/F45.jpg';
+import f2 from '@/assets/f2.jpg';
+import f3 from '@/assets/f3.jpg';
+import f4 from '@/assets/f4.jpg';
+import f5 from '@/assets/f5.jpg';
+import f6 from '@/assets/f6.jpg';
+import f7 from '@/assets/f7.jpg';
 </script>
 
 <template>
@@ -296,18 +303,376 @@ import DownvoteIcon from './icons/DownvoteIcon.vue';
                 </div>
                 <div class="comment-block">
                     <div class="comment">
-                        <div class="comment-ava"></div>
+                        <div class="comment-ava">
+                            <div class="ava-bg" :style="`background: url(${f45}) center center / cover no-repeat`">
+                                <img :src="frame_gold" alt="frame_gold">
+                            </div>
+                        </div>
                         <div class="comment-body">
                             <div class="name-time">
-                                <span class="name">Laura Rodríguez</span>
-                                &nbsp;
-                                <span class="time">time</span>
+                                <span class="name">Judy_hopps</span>
+                                <span class="time">- time</span>
                             </div>
                             <div class="text">
                                 <p>
                                     ¡Gran publicación, Óscar! Fotos geniales. Mi esposo y yo estamos emocionados por ir
                                     a Colombia.
                                     ¿Dime por favor si me hacen descuento al pedir 3 recipientes?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vote">
+                        <div class="upvote">
+                            <span class="arrow">
+                                <UpvoteIcon />
+                            </span>
+                            12
+                        </div>
+                        <div class="downvote">
+                            <span class="arrow">
+                                <DownvoteIcon />
+                            </span>
+                            0
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-block">
+                    <div class="comment">
+                        <div class="comment-ava">
+                            <div class="ava-bg" :style="`background: url(${ava}) center center / cover no-repeat`">
+                                <img :src="frame_gold" alt="frame_gold">
+                            </div>
+                        </div>
+                        <div class="comment-body">
+                            <div class="name-time">
+                                <span class="name">Oscar (author)</span>
+                                <span class="time">- time</span>
+                            </div>
+                            <div class="text">
+                                <p>
+                                    <span class="repl">Judy_hopps</span>, seguro que lo hacen. El descuento es válido al
+                                    pedir a partir de 2 packs. Pero solo si lo haces a través de este formulario. Eso es
+                                    lo que me dijeron los fabricantes. También usé este formulario para mis pedidos la
+                                    primera vez.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vote">
+                        <div class="upvote">
+                            <span class="arrow">
+                                <UpvoteIcon />
+                            </span>
+                            12
+                        </div>
+                        <div class="downvote">
+                            <span class="arrow">
+                                <DownvoteIcon />
+                            </span>
+                            0
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-block">
+                    <div class="comment">
+                        <div class="comment-ava">
+                            <div class="ava-bg" :style="`background: url(${f45}) center center / cover no-repeat`">
+                                <img :src="frame_gold" alt="frame_gold">
+                            </div>
+                        </div>
+                        <div class="comment-body">
+                            <div class="name-time">
+                                <span class="name">Judy_hopps</span>
+                                <span class="time">- time</span>
+                            </div>
+                            <div class="text">
+                                <p>
+                                    <span class="repl">Oscar (Autor)</span>, ¿Por qué no haces los pedidos ahora?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vote">
+                        <div class="upvote">
+                            <span class="arrow">
+                                <UpvoteIcon />
+                            </span>
+                            12
+                        </div>
+                        <div class="downvote">
+                            <span class="arrow">
+                                <DownvoteIcon />
+                            </span>
+                            0
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-block">
+                    <div class="comment">
+                        <div class="comment-ava">
+                            <div class="ava-bg" :style="`background: url(${ava}) center center / cover no-repeat`">
+                                <img :src="frame_gold" alt="frame_gold">
+                            </div>
+                        </div>
+                        <div class="comment-body">
+                            <div class="name-time">
+                                <span class="name">Oscar (author)</span>
+                                <span class="time">- time</span>
+                            </div>
+                            <div class="text">
+                                <p>
+                                    <span class="repl">Judy_hopps</span>, Reduje poco a poco la dosis de Procardio y
+                                    noté que ahora me siento bien incluso sin las cápsulas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vote">
+                        <div class="upvote">
+                            <span class="arrow">
+                                <UpvoteIcon />
+                            </span>
+                            12
+                        </div>
+                        <div class="downvote">
+                            <span class="arrow">
+                                <DownvoteIcon />
+                            </span>
+                            0
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-block">
+                    <div class="comment">
+                        <div class="comment-ava">
+                            <div class="ava-bg" :style="`background: url(${f2}) center center / cover no-repeat`">
+                                <img :src="frame_silver" alt="frame_gold">
+                            </div>
+                        </div>
+                        <div class="comment-body">
+                            <div class="name-time">
+                                <span class="name">Astolfouwu</span>
+                                <span class="time">- time</span>
+                            </div>
+                            <div class="text">
+                                <p>
+                                    ¿Por cuánto tiempo tomaste las cápsulas? He estado sufriendo de dolores de cabeza y
+                                    de hipertensión durante 6 años. Estoy buscando alguna manera de aliviarlos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vote">
+                        <div class="upvote">
+                            <span class="arrow">
+                                <UpvoteIcon />
+                            </span>
+                            12
+                        </div>
+                        <div class="downvote">
+                            <span class="arrow">
+                                <DownvoteIcon />
+                            </span>
+                            0
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-block">
+                    <div class="comment">
+                        <div class="comment-ava">
+                            <div class="ava-bg" :style="`background: url(${ava}) center center / cover no-repeat`">
+                                <img :src="frame_gold" alt="frame_gold">
+                            </div>
+                        </div>
+                        <div class="comment-body">
+                            <div class="name-time">
+                                <span class="name">Oscar (author)</span>
+                                <span class="time">- time</span>
+                            </div>
+                            <div class="text">
+                                <p>
+                                    <span class="repl">Astolfouwu</span>, aproximadamente durante 3-4 meses antes de
+                                    disminuir la dosis.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vote">
+                        <div class="upvote">
+                            <span class="arrow">
+                                <UpvoteIcon />
+                            </span>
+                            12
+                        </div>
+                        <div class="downvote">
+                            <span class="arrow">
+                                <DownvoteIcon />
+                            </span>
+                            0
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-block">
+                    <div class="comment">
+                        <div class="comment-ava">
+                            <div class="ava-bg" :style="`background: url(${f3}) center center / cover no-repeat`">
+                                <img :src="frame_gold" alt="frame_gold">
+                            </div>
+                        </div>
+                        <div class="comment-body">
+                            <div class="name-time">
+                                <span class="name">Zombie76311</span>
+                                <span class="time">- time</span>
+                            </div>
+                            <div class="text">
+                                <p>
+                                    <span class="repl">Astolfouwu</span>, Vivo en Bogotá, y sí que conozco a Procardio
+                                    desde hace mucho tiempo. Las tomé 5 meses estrictamente de acuerdo con las
+                                    instrucciones del producto. Luego también traté de reducir la dosis, y desde hace 7
+                                    meses todo está bien.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vote">
+                        <div class="upvote">
+                            <span class="arrow">
+                                <UpvoteIcon />
+                            </span>
+                            12
+                        </div>
+                        <div class="downvote">
+                            <span class="arrow">
+                                <DownvoteIcon />
+                            </span>
+                            0
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-block">
+                    <div class="comment">
+                        <div class="comment-ava">
+                            <div class="ava-bg" :style="`background: url(${f4}) center center / cover no-repeat`">
+                                <img :src="frame_gold" alt="frame_gold">
+                            </div>
+                        </div>
+                        <div class="comment-body">
+                            <div class="name-time">
+                                <span class="name">_whitewolf_</span>
+                                <span class="time">- time</span>
+                            </div>
+                            <div class="text">
+                                <p>
+                                    ¿Alguien ha tenido una erupción o hinchazón debido a las cápsulas? Soy alérgico. Y
+                                    estoy muy preocupado por los efectos secundarios.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vote">
+                        <div class="upvote">
+                            <span class="arrow">
+                                <UpvoteIcon />
+                            </span>
+                            12
+                        </div>
+                        <div class="downvote">
+                            <span class="arrow">
+                                <DownvoteIcon />
+                            </span>
+                            0
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-block">
+                    <div class="comment">
+                        <div class="comment-ava">
+                            <div class="ava-bg" :style="`background: url(${f5}) center center / cover no-repeat`">
+                                <img :src="frame_gold" alt="frame_gold">
+                            </div>
+                        </div>
+                        <div class="comment-body">
+                            <div class="name-time">
+                                <span class="name">munuss</span>
+                                <span class="time">- time</span>
+                            </div>
+                            <div class="text">
+                                <p>
+                                    <span class="repl">_whitewolf_</span>, También he sido alérgico desde la infancia.
+                                    Pero no tuve ninguna reacción a las cápsulas. Las he estado tomando durante dos
+                                    meses. Los síntomas de la hipertensión claramente han disminuido.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vote">
+                        <div class="upvote">
+                            <span class="arrow">
+                                <UpvoteIcon />
+                            </span>
+                            12
+                        </div>
+                        <div class="downvote">
+                            <span class="arrow">
+                                <DownvoteIcon />
+                            </span>
+                            0
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-block">
+                    <div class="comment">
+                        <div class="comment-ava">
+                            <div class="ava-bg" :style="`background: url(${f6}) center center / cover no-repeat`">
+                                <img :src="frame_diamond" alt="frame_gold">
+                            </div>
+                        </div>
+                        <div class="comment-body">
+                            <div class="name-time">
+                                <span class="name">Krusty</span>
+                                <span class="time">- time</span>
+                            </div>
+                            <div class="text">
+                                <p>
+                                    ¿Alguien ha pedido a través del formulario en la publicación? ¿Cuánto tiempo
+                                    tardaron en entregar las cápsulas?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vote">
+                        <div class="upvote">
+                            <span class="arrow">
+                                <UpvoteIcon />
+                            </span>
+                            12
+                        </div>
+                        <div class="downvote">
+                            <span class="arrow">
+                                <DownvoteIcon />
+                            </span>
+                            0
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-block">
+                    <div class="comment">
+                        <div class="comment-ava">
+                            <div class="ava-bg" :style="`background: url(${f7}) center center / cover no-repeat`">
+                                <img :src="frame_silver" alt="frame_gold">
+                            </div>
+                        </div>
+                        <div class="comment-body">
+                            <div class="name-time">
+                                <span class="name">Barredahero</span>
+                                <span class="time">- time</span>
+                            </div>
+                            <div class="text">
+                                <p>
+                                    <span class="repl">Krusty</span>, Yo lo hice. Me entregaron las cápsulas a Medellín en 2 o 3 días, no recuerdo
+                                    exactamente. Empecé a tomarlos en cuanto aparecieron los primeros síntomas y mi vida
+                                    se hizo más fácil.
                                 </p>
                             </div>
                         </div>
@@ -334,22 +699,61 @@ import DownvoteIcon from './icons/DownvoteIcon.vue';
 </template>
 
 <style lang="scss">
-.vote  {
+.repl {
+    color: var(--link-color);
+}
+
+.ava-bg {
+    border-radius: 7px;
+
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+
+.vote {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 10px;
-    gap: 15px;
+    padding: 0 10px 15px;
+    gap: 10px;
+    border-bottom: 1px solid var(--floating-box-shadow-color);
 
-    .upvote,.downvote {
+
+    .upvote,
+    .downvote {
         vertical-align: middle;
         padding: 4px 12px;
-        border: 1px solid black;
+        border: 1px solid var(--alternative-line-color);
         border-radius: 20px;
         font-size: 11px;
         font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .upvote {
+        color: #02a24b;
+
+        &:hover {
+            color: white;
+            background-color: #02a24b;
+        }
+    }
+
+    .downvote {
+        color: #db4242;
+
+        &:hover {
+            color: white;
+            background-color: #db4242;
+        }
     }
 }
+
 .name-time {
 
     .name {
@@ -372,6 +776,7 @@ import DownvoteIcon from './icons/DownvoteIcon.vue';
     display: flex;
     justify-content: flex-start;
     gap: 10px;
+    padding-top: 20px;
 
     .comment-ava {
         width: 42px;
@@ -406,6 +811,7 @@ import DownvoteIcon from './icons/DownvoteIcon.vue';
 
 article {
     border-radius: 5px;
+    background-color: #fff;
 
     &.comments {
         font-family: var(--main-ff);

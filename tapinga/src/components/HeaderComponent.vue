@@ -22,12 +22,12 @@ import EnterIcon from './icons/EnterIcon.vue';
                     <BagIcon />
                     <span class="w"> T! Store</span>
                 </div>
-                <!-- <div class="input">
+                <div class="input">
                     <input placeholder="Buscar" maxlength="200" class="search" value="" />
                     <SearchIcon />
-                </div> -->
+                </div>
             </div>
-            <!-- <div class="header-section header-section__right">
+            <div class="header-section header-section__right">
                 <BellIcon />
                 <div class="regist">
                     Registrarme
@@ -36,7 +36,7 @@ import EnterIcon from './icons/EnterIcon.vue';
                     <EnterIcon />
                     <span class="w"> Iniciar Sesión</span>
                 </button>
-            </div> -->
+            </div>
         </div>
     </header>
 </template>
