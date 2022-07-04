@@ -18,6 +18,13 @@ import f5 from '@/assets/f5.jpg';
 import f6 from '@/assets/f6.jpg';
 import f7 from '@/assets/f7.jpg';
 import OrderForm from './OrderForm.vue';
+
+import { formatDistance, subDays } from 'date-fns'
+
+const daysAgo = function(days: number) {
+    return `hace ${days} días`;
+}
+
 </script>
 
 <template>
@@ -37,7 +44,7 @@ import OrderForm from './OrderForm.vue';
                         </div>
                     </div>
                     <div class="article-date">
-                        art date
+                        {{daysAgo(5)}}
                     </div>
                 </div>
                 <p class="text">
@@ -313,7 +320,7 @@ import OrderForm from './OrderForm.vue';
                         <div class="comment-body">
                             <div class="name-time">
                                 <span class="name">Judy_hopps</span>
-                                <span class="time">- time</span>
+                                <span class="time">- {{daysAgo(5)}}</span>
                             </div>
                             <div class="text">
                                 <p>
@@ -349,7 +356,7 @@ import OrderForm from './OrderForm.vue';
                         <div class="comment-body">
                             <div class="name-time">
                                 <span class="name">Oscar (author)</span>
-                                <span class="time">- time</span>
+                                <span class="time">- {{daysAgo(5)}}</span>
                             </div>
                             <div class="text">
                                 <p>
@@ -386,7 +393,7 @@ import OrderForm from './OrderForm.vue';
                         <div class="comment-body">
                             <div class="name-time">
                                 <span class="name">Judy_hopps</span>
-                                <span class="time">- time</span>
+                                <span class="time">- {{daysAgo(5)}}</span>
                             </div>
                             <div class="text">
                                 <p>
@@ -420,7 +427,7 @@ import OrderForm from './OrderForm.vue';
                         <div class="comment-body">
                             <div class="name-time">
                                 <span class="name">Oscar (author)</span>
-                                <span class="time">- time</span>
+                                <span class="time">- {{daysAgo(5)}}</span>
                             </div>
                             <div class="text">
                                 <p>
@@ -455,7 +462,7 @@ import OrderForm from './OrderForm.vue';
                         <div class="comment-body">
                             <div class="name-time">
                                 <span class="name">Astolfouwu</span>
-                                <span class="time">- time</span>
+                                <span class="time">- {{daysAgo(4)}}</span>
                             </div>
                             <div class="text">
                                 <p>
@@ -490,7 +497,7 @@ import OrderForm from './OrderForm.vue';
                         <div class="comment-body">
                             <div class="name-time">
                                 <span class="name">Oscar (author)</span>
-                                <span class="time">- time</span>
+                                <span class="time">- {{daysAgo(4)}}</span>
                             </div>
                             <div class="text">
                                 <p>
@@ -525,7 +532,7 @@ import OrderForm from './OrderForm.vue';
                         <div class="comment-body">
                             <div class="name-time">
                                 <span class="name">Zombie76311</span>
-                                <span class="time">- time</span>
+                                <span class="time">- {{daysAgo(4)}}</span>
                             </div>
                             <div class="text">
                                 <p>
@@ -562,7 +569,7 @@ import OrderForm from './OrderForm.vue';
                         <div class="comment-body">
                             <div class="name-time">
                                 <span class="name">_whitewolf_</span>
-                                <span class="time">- time</span>
+                                <span class="time">- {{daysAgo(3)}}</span>
                             </div>
                             <div class="text">
                                 <p>
@@ -597,7 +604,7 @@ import OrderForm from './OrderForm.vue';
                         <div class="comment-body">
                             <div class="name-time">
                                 <span class="name">munuss</span>
-                                <span class="time">- time</span>
+                                <span class="time">- {{daysAgo(3)}}</span>
                             </div>
                             <div class="text">
                                 <p>
@@ -633,7 +640,7 @@ import OrderForm from './OrderForm.vue';
                         <div class="comment-body">
                             <div class="name-time">
                                 <span class="name">Krusty</span>
-                                <span class="time">- time</span>
+                                <span class="time">- {{daysAgo(2)}}</span>
                             </div>
                             <div class="text">
                                 <p>
@@ -668,7 +675,7 @@ import OrderForm from './OrderForm.vue';
                         <div class="comment-body">
                             <div class="name-time">
                                 <span class="name">Barredahero</span>
-                                <span class="time">- time</span>
+                                <span class="time">- {{daysAgo(2)}}</span>
                             </div>
                             <div class="text">
                                 <p>
