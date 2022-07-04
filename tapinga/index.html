@@ -2,14 +2,36 @@
 <html lang="en">
 
 <head>
+  <script>
+    window.lmt_config = {
+      product_name: "Procardi",
+      //product_image: 'assets/product.cc580d91.png',
+      modal_shown: false,
+      name_pattern: new RegExp(/[aábcdeéfghijklmnñoópqrstuúüvwxyzAÁBCDEÉFGHIJKLMNÑOÓPQRSTUÚÜVWXYZ\s]{3,}/),
+      tel_pattern: new RegExp(/\+{0,1}57[\d]{10}/),
+      form_params: {
+        flow_id: '<?=getParam("flow_id")?>',
+        geo: '<?=getParam("flow_geo")?>',
+        sub1: '<?=getParam("sub1")?>',
+        sub2: '<?=getParam("sub2")?>',
+        sub3: '<?=getParam("sub3")?>',
+        sub4: '<?=getParam("sub4")?>',
+        sub5: '<?=getParam("sub5")?>'
+      },
+      validity: {
+        name_error: 'Please use only latin letters',
+        tel_error: 'Please enter phone number in format of "+57xxxxxxxxxx"'
+      }
+    }
+  </script>
   <meta charset="UTF-8" />
-  <link fvc rel="icon" href="/favicon.jpg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
+  <link id="fvc" rel="icon" href="favicon.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+  <title>Ahora quiero vivir hasta los 150 años</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
 </head>
 

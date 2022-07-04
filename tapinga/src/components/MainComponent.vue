@@ -17,6 +17,7 @@ import f4 from '@/assets/f4.jpg';
 import f5 from '@/assets/f5.jpg';
 import f6 from '@/assets/f6.jpg';
 import f7 from '@/assets/f7.jpg';
+import OrderForm from './OrderForm.vue';
 </script>
 
 <template>
@@ -296,6 +297,7 @@ import f7 from '@/assets/f7.jpg';
                     </p>
                 </div>
             </article>
+            <OrderForm />
             <article class="comments">
                 <div class="comments-header">
                     <span class="nc">13&nbsp;</span>
@@ -693,7 +695,6 @@ import f7 from '@/assets/f7.jpg';
                     </div>
                 </div>
             </article>
-            <br><br><br>
         </div>
     </main>
 </template>
@@ -818,7 +819,6 @@ article {
 
         padding: 20px;
         padding-top: 1px;
-        margin-top: 20px;
         box-shadow: 0 0 5px var(--floating-box-shadow-color);
         border-bottom: 1px solid var(--floating-box-shadow-color);
 
