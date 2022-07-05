@@ -34,7 +34,7 @@ onMounted(() => {
 <template>
     <HeaderComponent />
     <MainComponent />
-    <ComebackComponent v-if="show.state" />
+    <ComebackComponent v-if="show.state" @close="show.state = false" />
 </template>
 
 <style>
