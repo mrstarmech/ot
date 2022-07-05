@@ -880,7 +880,7 @@ article {
         }
 
         p.text {
-            font-size: 14px;
+            font-size: 15px;
             margin-top: 0;
             line-height: 20px;
             color: var(--creator-block-paragraph);

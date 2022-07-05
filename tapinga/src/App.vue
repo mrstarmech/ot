@@ -10,20 +10,19 @@ onMounted(() => {
         state: 'cbk',
     }, '', window.location.href);
     window.addEventListener('popstate', (ev) => {
-        console.log('pop');
         
         if (once.state) {
             history.pushState({
                 state: 'cbk'
-            }, '', window.location.href+'cbk');
+            }, '', window.location.href);
 
             show.state = true;
             once.state = false;
         }
     });
 
-    document.addEventListener('mouseout', ()=>{
-        if (once.state) {
+    document.addEventListener('mouseout', (event)=>{
+        if (event.clientY < 10 &&once.state) {
             show.state = true;
             once.state = false;
         }
