@@ -9,10 +9,11 @@ const close = function () {
   emit("close");
 };
 const emit = defineEmits(["close"]);
-const getParamFromConfig = function(name:string):string {
+const getParamFromConfig = function (name: string): string {
   //@ts-ignore
   return window.lmt_config.form_params[name];
 }
+const product_name = window.lmt_config.product_name;
 const name_input = reactive({ val: '' });
 const tel_input = reactive({ val: '' });
 const validate_input = function (i_value: string, regex: RegExp) {
@@ -42,14 +43,14 @@ const submit = function (event: Event) {
   form.submit();
 }
 
-const name_input_handler = function(event: Event) {
+const name_input_handler = function (event: Event) {
   const _name_input = (event.target as HTMLInputElement);
   name_input.val = _name_input.value;
   _name_input.setCustomValidity('');
   _name_input.reportValidity();
 }
 
-const tel_input_handler = function(event: Event) {
+const tel_input_handler = function (event: Event) {
   const _tel_input = (event.target as HTMLInputElement);
   tel_input.val = _tel_input.value;
   _tel_input.setCustomValidity('');
@@ -57,15 +58,16 @@ const tel_input_handler = function(event: Event) {
 }
 </script>
 <template>
-  <div class="form-modal-container" @click="close">
+  <div id="order-form" class="form-modal-container" @click="close">
     <div class="modal-form" @click.stop>
       <div class="modal-form__banner" :style="{ backgroundImage: `url(${banner_bg})` }">
-        
+
         <div class="modal-form__banner-overlay">
-          <p class="head1">-50%</p>
-          <p class="head2">¡descuento ya te está esperando!</p>
-          <p class="form-price-old">258000 cop</p>
-          <p class="form-price-new">129000 cop</p>
+          <p class="head1">{{product_name}}</p>
+          <p class="form-price-old">167 700 cop</p>
+          <p class="form-price-new">129 000 cop</p>
+          <p class="head2">Un nuevo y probado producto de recuperación del sistema circulatorio aprobado por los profesionales. Contiene ingredientes naturales.</p>
+          <p class="head3">¡Atención! El producto es un suplemento dietético y no es un medicamento.</p>
         </div>
       </div>
       <form id="order-form-modal" action="/send/send_1.php" class="modal-form__form">
@@ -76,21 +78,19 @@ const tel_input_handler = function(event: Event) {
         <input type="hidden" id="sub3" name="sub3" :value="getParamFromConfig('sub3')">
         <input type="hidden" id="sub4" name="sub4" :value="getParamFromConfig('sub4')">
         <input type="hidden" id="sub5" name="sub5" :value="getParamFromConfig('sub5')">
-        
+
         <p class="form-note">
-          Se le aprueba un <span>descuento del 50%</span> en todo su pedido (a
-          partir de dos latas). Deje sus datos de contacto en el siguiente
+          Obtenga un descuento <span>exclusivo del 30%</span> en su pedido. Deje sus datos de contacto en el siguiente
           formulario:
         </p>
-        <input :value="name_input.val" @input="name_input_handler"
-          type="text" name="name" id="name" placeholder="Su nombre:" required />
-        <input :value="tel_input.val" @input="tel_input_handler"
-          type="tel" name="phone" id="phone" placeholder="Su número de teléfono:" required />
+        <input :value="name_input.val" @input="name_input_handler" type="text" name="name" id="name"
+          placeholder="Su nombre:" required />
+        <input :value="tel_input.val" @input="tel_input_handler" type="tel" name="phone" id="phone"
+          placeholder="Su número de teléfono:" required />
         <button type="submit" @click.prevent="submit" class="submit-btn">PEDIR >></button>
         <p class="form-note-b">
-          Las solicitudes se aceptan y tramitan las 24 horas del día, los 7 días
-          de la semana. El descuento sólo es válido para pedidos de 2 paquetes o
-          más a través del formulario anterior.
+          Las solicitudes se aceptan y tramitan las 24 horas del día, los 7 días de la semana. El descuento sólo es
+          válido para <span>pedidos de 2 paquetes</span> o más a través del formulario anterior.
         </p>
       </form>
     </div>
@@ -149,7 +149,7 @@ const tel_input_handler = function(event: Event) {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Arial Black", "Lato";
+  font-family: "Arial", "Lato";
   padding: 10px 0;
   z-index: 999;
 
@@ -170,49 +170,62 @@ const tel_input_handler = function(event: Event) {
       background-position: center center;
       background-size: cover;
       background-repeat: no-repeat;
-      flex: 0 1 406px;
+      flex: 0 1 50%;
       text-align: center;
       color: #fff;
-      height: 428px;
       position: relative;
-      border-radius: 5px;
       overflow: hidden;
+      border-radius: 5px 0 0 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
 
       @media screen and (max-width: 655px) {
         flex: 1 1 auto;
-        border-radius: 5px;
         height: auto;
+        border-radius: 5px 5px 0 0;
+
       }
 
       .head1 {
-        font-size: 80px;
-        font-weight: 900;
-        margin: 0;
-        line-height: 113px;
-        color: #f1ff51;
+        font-size: 60px;
+        font-weight: 700;
+        margin: 0 0 20px;
+        line-height: 75px;
+        color: #fff9f9;
 
         @media screen and (max-width: 970px) {
-          font-size: 60px;
-          line-height: 80px;
+          font-size: 40px;
+          line-height: 50px;
+          margin-bottom: 0;
         }
       }
 
       .head2 {
-        font-size: 30px;
-        line-height: 42px;
+        font-size: 16px;
         margin: 0;
-        text-transform: uppercase;
-
-        @media screen and (max-width: 970px) {
-          font-size: 24px;
-          line-height: 30px;
+        text-align: left;
+        @media screen and (max-width: 655px) {
+          text-align: center;
+        }
+      }
+      .head3 {
+        font-size: 10px;
+        text-align: left;
+        color: #ffbfbf;
+        @media screen and (max-width: 655px) {
+          text-align: center;
         }
       }
 
       .form-price-old {
+        text-align: left;
         font-size: 28px;
         line-height: 32px;
         font-weight: 700;
+        margin: 0;
         text-decoration: line-through;
         color: #e7cbcb;
 
@@ -224,9 +237,10 @@ const tel_input_handler = function(event: Event) {
       .form-price-new {
         font-size: 45px;
         line-height: 63px;
-        font-weight: 900;
+        font-weight: 600;
         color: #f1ff51;
         margin: 0;
+        text-align: left;
 
         @media screen and (max-width: 970px) {
           font-size: 36px;
@@ -240,21 +254,22 @@ const tel_input_handler = function(event: Event) {
     }
 
     &__form {
-      flex: 0 1 497px;
+      flex: 0 1 50%;
+
       background: #fff9f7;
       border-width: 1px 1px 1px 0px;
       border-style: solid;
       border-color: rgba(171, 171, 171, 0.7);
-      border-radius: 0px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       padding: 50px;
-      padding-bottom: 0;
+      padding-bottom: 15px;
+      padding-top: 30px;
       position: relative;
-      border-radius: 5px;
       overflow: hidden;
+      border-radius: 0 5px 5px 0;
 
       @media screen and (max-width: 970px) {
         padding: 40px;
@@ -270,10 +285,11 @@ const tel_input_handler = function(event: Event) {
         border-width: 0 1px 1px 1px;
         border-style: solid;
         border-color: rgba(171, 171, 171, 0.7);
-        border-radius: 5px;
         padding: 20px 20px 0;
         flex: 1 1 auto;
         line-height: 1.15 !important;
+        border-radius: 0 0 5px 5px;
+
 
         .form-note {
           line-height: 1.15 !important;
@@ -374,10 +390,14 @@ const tel_input_handler = function(event: Event) {
       width: 100%;
       height: 100%;
       background: linear-gradient(180deg, #e30000c4 0%, #fb3333d8 100%);
-      padding: 1px;
+      padding: 30px;
       display: flex;
-      justify-content: center;
       flex-direction: column;
+      justify-content: flex-end;
+      @media screen and (max-width: 655px) {
+          padding: 10px;
+          align-items: center;
+        }
     }
   }
 }

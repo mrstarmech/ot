@@ -47,5 +47,9 @@
     "vite-plugin-webfont-dl": "^2.1.0",
     "vitest": "^0.15.1",
     "vue-tsc": "^0.38.1"
-  }
+  },
+  "browserslist":[
+    "> 0.2%",
+    "ie 11"
+  ]
 }

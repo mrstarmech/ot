@@ -1,7 +1,6 @@
 import { createApp } from "vue";
 import { createPinia } from "pinia";
 import product from "@/assets/product.png";
-
 import App from "./App.vue";
 declare global {
     interface Window {
@@ -59,5 +58,4 @@ declare global {
 const app = createApp(App);
 
 app.use(createPinia());
-
 app.mount("#app");

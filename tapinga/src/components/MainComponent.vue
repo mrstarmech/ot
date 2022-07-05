@@ -19,12 +19,14 @@ import f6 from '@/assets/f6.jpg';
 import f7 from '@/assets/f7.jpg';
 import OrderForm from './OrderForm.vue';
 
-import { formatDistance, subDays } from 'date-fns'
-
-const daysAgo = function(days: number) {
-    return `hace ${days} días`;
+import { format, sub } from 'date-fns'
+import { es } from 'date-fns/locale';
+import FooterComponent from './FooterComponent.vue';
+const d = new Date();
+const dateBefore = function (days: Duration) {
+    return format(sub(d, days), 'd MMMM y', { locale: es });
 }
-
+const product_name = window.lmt_config.product_name;
 </script>
 
 <template>
@@ -44,7 +46,7 @@ const daysAgo = function(days: number) {
                         </div>
                     </div>
                     <div class="article-date">
-                        {{daysAgo(5)}}
+                        {{ dateBefore({ days: 5 }) }}
                     </div>
                 </div>
                 <p class="text">
@@ -58,9 +60,9 @@ const daysAgo = function(days: number) {
 
                 </p>
                 <p class="text">
-                    Pero al final, en mi cumpleaños número 46, decidí hacerme un regalo y compré boletos para visitar a
+                    Pero al final, en mi cumpleaños número 42, decidí hacerme un regalo y compré boletos para visitar a
                     mi familia en Medellín, una de las mejores ciudades que he visitado. Pero quién hubiera pensado que
-                    este viaje me salvaría de mi viejo enemigo: la presión arterial alta.
+                    este viaje me salvaría de mi viejo enemigo: <b>la presión arterial alta</b>.
 
                 </p>
 
@@ -205,13 +207,14 @@ const daysAgo = function(days: number) {
 
                 </div>
 
-                <h2 class="article-subtitle" style="font-style: italic;">
-                    No podía esperar a saber qué medicina me había dado esta amable y gentil mujer.
+                <p class="text" style="font-style: italic;">
+                    <b>No podía esperar a saber qué medicina me había dado esta amable y gentil mujer.</b>
 
-                </h2>
+                </p>
                 <p class="text">
                     En cuanto la casera se despertó, lo primero que hice fue buscarla y preguntarle de nuevo qué cápsula
-                    me había dado ayer. Me dijo que era Procardi, un nuevo remedio colombiano para la hipertensión y la
+                    me había dado ayer. Me dijo que era <b>{{ product_name }}</b>, un nuevo remedio colombiano para la
+                    hipertensión y la
                     profilaxis para limpiar los vasos sanguíneos, que contiene hierbas medicinales locales en cantidades
                     equilibradas para una dosis diaria. Le pedí a la anfitriona unas cuantas cápsulas para el viaje;
                     ella compartió generosamente el resto del frasco, diciendo que tenía más en stock y que no tenía que
@@ -232,8 +235,10 @@ const daysAgo = function(days: number) {
 
                 <p class="text">
                     Anoté el nombre de este remedio y la composición de las hierbas en las notas de mi teléfono con la
-                    esperanza de encontrar algo similar si no podía encontrar Procardi. En la noche regresamos a
-                    Medellín, mi esposa buscó en internet el remedio y para mi alegría encontró a Procardi. Sin
+                    esperanza de encontrar algo similar si no podía encontrar <b>{{ product_name }}</b>. En la noche
+                    regresamos a
+                    Medellín, mi esposa buscó en internet el remedio y para mi alegría encontró a
+                    <b>{{ product_name }}</b>. Sin
                     pensarlo, pedí 10 tarros directamente al hotel, por si acaso.
 
                 </p>
@@ -274,14 +279,18 @@ const daysAgo = function(days: number) {
                 <p class="text">
                     Estoy más que seguro de que entre mis suscriptores hay personas para las que la hipertensión es una
                     dolencia terrible que perjudica su calidad de vida y les impide llevar una vida plena. Así que
-                    decidí ponerme en contacto con el fabricante de las cápsulas Procardi y contarles mi historia.
+                    decidí ponerme en contacto con el fabricante de las cápsulas <b>{{ product_name }}</b> y contarles mi
+                    historia.
 
                 </p>
                 <p class="text">
                     Quiero reiterar, la amabilidad de los colombianos me llamó mucho la atención: los fabricantes de
-                    Procardi aceptaron con gusto ayudarme e incluso crearon un formulario de pedido personal para mí y
-                    mis lectores favoritos (puede verlo a continuación). Además, si alguno de mis lectores pide Procardi
-                    a través de este formulario, recibirá un descuento exclusivo del 30% en todo el pedido. ¿Qué les
+                    <b>{{ product_name }}</b> aceptaron con gusto ayudarme e incluso crearon un formulario de pedido
+                    personal para mí y
+                    mis lectores favoritos (puede verlo a continuación). Además, si alguno de mis lectores pide
+                    <b>{{ product_name }}</b>
+                    a través de este formulario, <b>recibirá un descuento exclusivo del 30% en todo el pedido</b>. ¿Qué
+                    les
                     parece esto? ¡Los colombianos son increíbles!
 
                 </p>
@@ -293,12 +302,13 @@ const daysAgo = function(days: number) {
                 </p>
 
                 <div class="card">
+                    <p class="text"><b>
+                            El descuento solo está disponible al pedir 2 paquetes de cápsulas por medio del formulario a
+                            continuación.
+                        </b></p>
                     <p class="text">
-                        El descuento solo está disponible al pedir 2 paquetes de cápsulas por medio del formulario a
-                        continuación.
-                    </p>
-                    <p class="text">
-                        Debido a la situación mundial actual y los problemas logísticos, Procardi se produce en
+                        Debido a la situación mundial actual y los problemas logísticos, <b>{{ product_name }}</b> se
+                        produce en
                         cantidades limitadas. Por tanto, si quiere empezar a tomar cápsulas lo antes posible, dese prisa
                         con tu pedido.
                     </p>
@@ -307,7 +317,7 @@ const daysAgo = function(days: number) {
             <OrderForm />
             <article class="comments">
                 <div class="comments-header">
-                    <span class="nc">13&nbsp;</span>
+                    <span class="nc">11&nbsp;</span>
                     Commentarios
                 </div>
                 <div class="comment-block">
@@ -320,7 +330,7 @@ const daysAgo = function(days: number) {
                         <div class="comment-body">
                             <div class="name-time">
                                 <span class="name">Judy_hopps</span>
-                                <span class="time">- {{daysAgo(5)}}</span>
+                                <span class="time">- {{ dateBefore({ days: 5 }) }}</span>
                             </div>
                             <div class="text">
                                 <p>
@@ -336,7 +346,7 @@ const daysAgo = function(days: number) {
                             <span class="arrow">
                                 <UpvoteIcon />
                             </span>
-                            12
+                            1
                         </div>
                         <div class="downvote">
                             <span class="arrow">
@@ -356,7 +366,7 @@ const daysAgo = function(days: number) {
                         <div class="comment-body">
                             <div class="name-time">
                                 <span class="name">Oscar (author)</span>
-                                <span class="time">- {{daysAgo(5)}}</span>
+                                <span class="time">- {{ dateBefore({ days: 5 }) }}</span>
                             </div>
                             <div class="text">
                                 <p>
@@ -393,7 +403,7 @@ const daysAgo = function(days: number) {
                         <div class="comment-body">
                             <div class="name-time">
                                 <span class="name">Judy_hopps</span>
-                                <span class="time">- {{daysAgo(5)}}</span>
+                                <span class="time">- {{ dateBefore({ days: 5 }) }}</span>
                             </div>
                             <div class="text">
                                 <p>
@@ -407,7 +417,7 @@ const daysAgo = function(days: number) {
                             <span class="arrow">
                                 <UpvoteIcon />
                             </span>
-                            12
+                            5
                         </div>
                         <div class="downvote">
                             <span class="arrow">
@@ -427,11 +437,12 @@ const daysAgo = function(days: number) {
                         <div class="comment-body">
                             <div class="name-time">
                                 <span class="name">Oscar (author)</span>
-                                <span class="time">- {{daysAgo(5)}}</span>
+                                <span class="time">- {{ dateBefore({ days: 5 }) }}</span>
                             </div>
                             <div class="text">
                                 <p>
-                                    <span class="repl">Judy_hopps</span>, Reduje poco a poco la dosis de Procardio y
+                                    <span class="repl">Judy_hopps</span>, Reduje poco a poco la dosis de
+                                    {{ product_name }}o y
                                     noté que ahora me siento bien incluso sin las cápsulas.
                                 </p>
                             </div>
@@ -442,7 +453,7 @@ const daysAgo = function(days: number) {
                             <span class="arrow">
                                 <UpvoteIcon />
                             </span>
-                            12
+                            7
                         </div>
                         <div class="downvote">
                             <span class="arrow">
@@ -462,7 +473,7 @@ const daysAgo = function(days: number) {
                         <div class="comment-body">
                             <div class="name-time">
                                 <span class="name">Astolfouwu</span>
-                                <span class="time">- {{daysAgo(4)}}</span>
+                                <span class="time">- {{ dateBefore({ days: 4 }) }}</span>
                             </div>
                             <div class="text">
                                 <p>
@@ -477,7 +488,7 @@ const daysAgo = function(days: number) {
                             <span class="arrow">
                                 <UpvoteIcon />
                             </span>
-                            12
+                            2
                         </div>
                         <div class="downvote">
                             <span class="arrow">
@@ -497,7 +508,7 @@ const daysAgo = function(days: number) {
                         <div class="comment-body">
                             <div class="name-time">
                                 <span class="name">Oscar (author)</span>
-                                <span class="time">- {{daysAgo(4)}}</span>
+                                <span class="time">- {{ dateBefore({ days: 4 }) }}</span>
                             </div>
                             <div class="text">
                                 <p>
@@ -512,7 +523,7 @@ const daysAgo = function(days: number) {
                             <span class="arrow">
                                 <UpvoteIcon />
                             </span>
-                            12
+                            3
                         </div>
                         <div class="downvote">
                             <span class="arrow">
@@ -532,11 +543,12 @@ const daysAgo = function(days: number) {
                         <div class="comment-body">
                             <div class="name-time">
                                 <span class="name">Zombie76311</span>
-                                <span class="time">- {{daysAgo(4)}}</span>
+                                <span class="time">- {{ dateBefore({ days: 4 }) }}</span>
                             </div>
                             <div class="text">
                                 <p>
-                                    <span class="repl">Astolfouwu</span>, Vivo en Bogotá, y sí que conozco a Procardio
+                                    <span class="repl">Astolfouwu</span>, Vivo en Bogotá, y sí que conozco a
+                                    {{ product_name }} o
                                     desde hace mucho tiempo. Las tomé 5 meses estrictamente de acuerdo con las
                                     instrucciones del producto. Luego también traté de reducir la dosis, y desde hace 7
                                     meses todo está bien.
@@ -549,7 +561,7 @@ const daysAgo = function(days: number) {
                             <span class="arrow">
                                 <UpvoteIcon />
                             </span>
-                            12
+                            7
                         </div>
                         <div class="downvote">
                             <span class="arrow">
@@ -569,7 +581,7 @@ const daysAgo = function(days: number) {
                         <div class="comment-body">
                             <div class="name-time">
                                 <span class="name">_whitewolf_</span>
-                                <span class="time">- {{daysAgo(3)}}</span>
+                                <span class="time">- {{ dateBefore({ days: 3 }) }}</span>
                             </div>
                             <div class="text">
                                 <p>
@@ -584,7 +596,7 @@ const daysAgo = function(days: number) {
                             <span class="arrow">
                                 <UpvoteIcon />
                             </span>
-                            12
+                            8
                         </div>
                         <div class="downvote">
                             <span class="arrow">
@@ -604,7 +616,7 @@ const daysAgo = function(days: number) {
                         <div class="comment-body">
                             <div class="name-time">
                                 <span class="name">munuss</span>
-                                <span class="time">- {{daysAgo(3)}}</span>
+                                <span class="time">- {{ dateBefore({ days: 3 }) }}</span>
                             </div>
                             <div class="text">
                                 <p>
@@ -620,7 +632,7 @@ const daysAgo = function(days: number) {
                             <span class="arrow">
                                 <UpvoteIcon />
                             </span>
-                            12
+                            11
                         </div>
                         <div class="downvote">
                             <span class="arrow">
@@ -640,7 +652,7 @@ const daysAgo = function(days: number) {
                         <div class="comment-body">
                             <div class="name-time">
                                 <span class="name">Krusty</span>
-                                <span class="time">- {{daysAgo(2)}}</span>
+                                <span class="time">- {{ dateBefore({ days: 2 }) }}</span>
                             </div>
                             <div class="text">
                                 <p>
@@ -675,11 +687,12 @@ const daysAgo = function(days: number) {
                         <div class="comment-body">
                             <div class="name-time">
                                 <span class="name">Barredahero</span>
-                                <span class="time">- {{daysAgo(2)}}</span>
+                                <span class="time">- {{ dateBefore({ days: 2 }) }}</span>
                             </div>
                             <div class="text">
                                 <p>
-                                    <span class="repl">Krusty</span>, Yo lo hice. Me entregaron las cápsulas a Medellín en 2 o 3 días, no recuerdo
+                                    <span class="repl">Krusty</span>, Yo lo hice. Me entregaron las cápsulas a Medellín
+                                    en 2 o 3 días, no recuerdo
                                     exactamente. Empecé a tomarlos en cuanto aparecieron los primeros síntomas y mi vida
                                     se hizo más fácil.
                                 </p>
@@ -691,7 +704,7 @@ const daysAgo = function(days: number) {
                             <span class="arrow">
                                 <UpvoteIcon />
                             </span>
-                            12
+                            9
                         </div>
                         <div class="downvote">
                             <span class="arrow">
@@ -703,6 +716,7 @@ const daysAgo = function(days: number) {
                 </div>
             </article>
         </div>
+        <FooterComponent />
     </main>
 </template>
 
@@ -727,7 +741,6 @@ const daysAgo = function(days: number) {
     padding: 0 10px 15px;
     gap: 10px;
     border-bottom: 1px solid var(--floating-box-shadow-color);
-
 
     .upvote,
     .downvote {
@@ -803,6 +816,13 @@ const daysAgo = function(days: number) {
             color: var(--soft-text-color);
         }
     }
+    &-block {
+        &:last-of-type {
+            .vote {
+                border: 0;
+            }
+        }
+    }
 }
 
 .container {
@@ -826,6 +846,7 @@ article {
 
         padding: 20px;
         padding-top: 1px;
+        margin-bottom: 20px;
         box-shadow: 0 0 5px var(--floating-box-shadow-color);
         border-bottom: 1px solid var(--floating-box-shadow-color);
 
