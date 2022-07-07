@@ -24,7 +24,7 @@
   --featured-surface-color: #e6edf6;
   --shop-surface-color: #f2f7fb;
   --small-title-color: #575757;
-  --medium-title-color: #575757;
+  --medium-title-color: #000;
   --medium-title-hover-color: #005dab;
   --medium-title-visited-color: #609;
   --featured-title-color: #333;
@@ -183,7 +183,7 @@
   --creator-draft-preview-path: #005dab;
   --creator-draft-hover: #f4f4f4;
   --creator-block-title: #575757;
-  --creator-block-paragraph: #575757;
+  --creator-block-paragraph: #000;
   --creator-widget-input: #fff;
   --creator-widget-input-placeholder: #c6c6c6;
   --creator-widget-input-border: #e1e1e1;
@@ -232,6 +232,11 @@
   --toastify-color-progress-error: var(--toastify-color-error);
 }
 :root {
-  --header-ff: 'Lato';
-  --main-ff: 'Lato';
+  --header-ff: 'Roboto Condensed';
+  --main-ff: 'Inter';
+  --comm-ff: 'Inter';
+  --main-lh: 29px;
+  --main-fz: 20px;
+  --comm-fz: 16px;
+  --comm-lh: 20px;
 }

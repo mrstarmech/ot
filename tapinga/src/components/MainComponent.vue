@@ -38,7 +38,7 @@ const form_scroll = function () {
         <div class="container">
             <article class="article">
                 <h1 class="article-title">
-                    Cómo visité mi patria ancestral y me deshice de mi “enemigo”
+                    Tan sano como un futbolista: cómo me libré de la hipertensión visitando mi patria ancestral
                 </h1>
                 <div class="author-block">
                     <div class="author">
@@ -378,10 +378,7 @@ const form_scroll = function () {
                             </div>
                             <div class="text">
                                 <p>
-                                    <span class="repl">Judy_hopps</span>, seguro que lo hacen. El descuento es válido al
-                                    pedir a partir de 2 packs. Pero solo si lo haces a través de este formulario. Eso es
-                                    lo que me dijeron los fabricantes. También usé este formulario para mis pedidos la
-                                    primera vez.
+                                    <span class="repl">Judy_hopps</span>, sí, habrá un descuento independientemente del número de latas que pidas, pero tienes que hacer el pedido a través del formulario de arriba.
                                 </p>
                             </div>
                         </div>
@@ -793,7 +790,7 @@ a {
     .name {
         color: var(--link-color);
         margin-right: 5px;
-        font-size: 14px;
+        font-size: var(--comm-fz);
         font-weight: 700;
         text-decoration: none;
     }
@@ -821,12 +818,11 @@ a {
         max-width: 100%;
 
         p {
-            font-size: 14px;
-            line-height: 18px;
+            font-size: var(--comm-fz);
+            line-height: var(--comm-lh);
             overflow-wrap: anywhere;
             word-break: normal;
-            color: #575757;
-            color: var(--soft-text-color);
+            color: #000;
         }
     }
 
@@ -872,7 +868,7 @@ article {
 
             font-size: 16px;
             font-weight: 700;
-            color: var(--soft-title-color);
+            color: #000;
             border-bottom: 1px solid var(--floating-box-shadow-color);
 
             .nc {
@@ -891,12 +887,17 @@ article {
 
         .article-title {
             color: var(--medium-title-color);
+            font-family: var(--header-ff);
+            font-size: 40px;
+            @media screen and (max-width:655px) {
+                font-size: 30px;
+            }
         }
 
         p.text {
-            font-size: 15px;
+            font-size: var(--main-fz);
             margin-top: 0;
-            line-height: 20px;
+            line-height: var(--main-lh);
             color: var(--creator-block-paragraph);
         }
 

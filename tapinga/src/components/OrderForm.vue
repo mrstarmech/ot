@@ -148,7 +148,7 @@ const tel_input_handler = function (event: Event) {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Arial", "Lato";
+  font-family: var(--main-ff);
   padding: 10px 0;
   z-index: 999;
 
@@ -296,7 +296,7 @@ const tel_input_handler = function (event: Event) {
       }
 
       .form-note {
-        font-family: "Lato";
+        font-family: var(--main-ff);
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
@@ -320,7 +320,7 @@ const tel_input_handler = function (event: Event) {
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
-        font-family: "Lato";
+        font-family: var(--main-ff);
         line-height: 36px;
         width: 300px;
         max-width: 100%;
@@ -352,7 +352,7 @@ const tel_input_handler = function (event: Event) {
         border-radius: 200px;
         border: 0;
         color: #fff;
-        font-family: "Lato";
+        font-family: var(--main-ff);
         font-weight: 700;
         font-size: 24px;
         line-height: 65px;
@@ -372,7 +372,7 @@ const tel_input_handler = function (event: Event) {
 
       .form-note-b {
         font-size: 10px;
-        font-family: "Lato";
+        font-family: var(--main-ff);
         color: #b1a5a5;
 
         span {

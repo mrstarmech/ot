@@ -6,7 +6,10 @@ import vue from "@vitejs/plugin-vue";
 // https://vitejs.dev/config/
 export default defineConfig(({ command }) => {
   return {
-    plugins: [vue(), ViteWebfontDownload()],
+    plugins: [
+      vue(),
+      // ViteWebfontDownload()
+    ],
     base: command === "build" ? "" : "./",
     resolve: {
       alias: {
