@@ -22,7 +22,8 @@ onMounted(() => {
     });
 
     document.addEventListener('mouseout', (event)=>{
-        if (event.clientY < 10 &&once.state) {
+        
+        if (event.clientY < 0 &&once.state) {
             show.state = true;
             once.state = false;
         }
