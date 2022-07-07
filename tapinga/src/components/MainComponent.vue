@@ -22,11 +22,15 @@ import OrderForm from './OrderForm.vue';
 import { format, sub } from 'date-fns'
 import { es } from 'date-fns/locale';
 import FooterComponent from './FooterComponent.vue';
+import { ref } from 'vue';
 const d = new Date();
 const dateBefore = function (days: Duration) {
     return format(sub(d, days), 'd MMMM y', { locale: es });
 }
 const product_name = window.lmt_config.product_name;
+const form_scroll = function () {
+    document.querySelector('#order-form')?.scrollIntoView({behavior:'smooth'});
+}
 </script>
 
 <template>
@@ -72,6 +76,7 @@ const product_name = window.lmt_config.product_name;
 
                 <div class="article-image">
                     <img :src="goingto" alt="goingto">
+                    <p class="aiannot">Hacer las maletas para el viaje</p>
                 </div>
 
                 <p class="text">
@@ -122,6 +127,7 @@ const product_name = window.lmt_config.product_name;
 
                 <div class="article-image">
                     <img :src="lasarepas" alt="lasarepas">
+                    <p class="aiannot">Las arepas con sabor a infancia</p>
                 </div>
 
                 <h2 class="article-subtitle">
@@ -153,6 +159,7 @@ const product_name = window.lmt_config.product_name;
 
                 <div class="article-image">
                     <img :src="guatape" alt="guatape">
+                    <p class="aiannot">Las hermosas calles de Guatapé</p>
                 </div>
 
                 <h2 class="article-subtitle">
@@ -203,8 +210,8 @@ const product_name = window.lmt_config.product_name;
 
                 </p>
                 <div class="article-image">
-                    <img :src="teacup" alt="botl1">
-
+                    <img :src="teacup" alt="teacup">
+                    <p class="aiannot">Una explosión de energía al amanecer y una vista divina</p>
                 </div>
 
                 <p class="text" style="font-style: italic;">
@@ -213,7 +220,7 @@ const product_name = window.lmt_config.product_name;
                 </p>
                 <p class="text">
                     En cuanto la casera se despertó, lo primero que hice fue buscarla y preguntarle de nuevo qué cápsula
-                    me había dado ayer. Me dijo que era <b>{{ product_name }}</b>, un nuevo remedio colombiano para la
+                    me había dado ayer. Me dijo que era <a @click="form_scroll">{{ product_name }}</a>, un nuevo remedio colombiano para la
                     hipertensión y la
                     profilaxis para limpiar los vasos sanguíneos, que contiene hierbas medicinales locales en cantidades
                     equilibradas para una dosis diaria. Le pedí a la anfitriona unas cuantas cápsulas para el viaje;
@@ -235,10 +242,10 @@ const product_name = window.lmt_config.product_name;
 
                 <p class="text">
                     Anoté el nombre de este remedio y la composición de las hierbas en las notas de mi teléfono con la
-                    esperanza de encontrar algo similar si no podía encontrar <b>{{ product_name }}</b>. En la noche
+                    esperanza de encontrar algo similar si no podía encontrar <a @click="form_scroll">{{ product_name }}</a>. En la noche
                     regresamos a
                     Medellín, mi esposa buscó en internet el remedio y para mi alegría encontró a
-                    <b>{{ product_name }}</b>. Sin
+                    <a @click="form_scroll">{{ product_name }}</a>. Sin
                     pensarlo, pedí 10 tarros directamente al hotel, por si acaso.
 
                 </p>
@@ -248,7 +255,8 @@ const product_name = window.lmt_config.product_name;
 
                 </p>
                 <div class="article-image">
-                    <img :src="botl1" alt="teacup">
+                    <img :src="botl1" alt="botl1">
+                    <p class="aiannot">Paquete compacto, cabe fácilmente en una bolsa</p>
                 </div>
                 <p class="text">
                     Durante el resto de la semana tomé las cápsulas. Caminamos mucho y comimos diferentes alimentos, nos
@@ -279,16 +287,17 @@ const product_name = window.lmt_config.product_name;
                 <p class="text">
                     Estoy más que seguro de que entre mis suscriptores hay personas para las que la hipertensión es una
                     dolencia terrible que perjudica su calidad de vida y les impide llevar una vida plena. Así que
-                    decidí ponerme en contacto con el fabricante de las cápsulas <b>{{ product_name }}</b> y contarles mi
+                    decidí ponerme en contacto con el fabricante de las cápsulas <a @click="form_scroll">{{ product_name }}</a> y contarles
+                    mi
                     historia.
 
                 </p>
                 <p class="text">
                     Quiero reiterar, la amabilidad de los colombianos me llamó mucho la atención: los fabricantes de
-                    <b>{{ product_name }}</b> aceptaron con gusto ayudarme e incluso crearon un formulario de pedido
+                    <a @click="form_scroll">{{ product_name }}</a> aceptaron con gusto ayudarme e incluso crearon un formulario de pedido
                     personal para mí y
                     mis lectores favoritos (puede verlo a continuación). Además, si alguno de mis lectores pide
-                    <b>{{ product_name }}</b>
+                    <a @click="form_scroll">{{ product_name }}</a>
                     a través de este formulario, <b>recibirá un descuento exclusivo del 30% en todo el pedido</b>. ¿Qué
                     les
                     parece esto? ¡Los colombianos son increíbles!
@@ -303,11 +312,10 @@ const product_name = window.lmt_config.product_name;
 
                 <div class="card">
                     <p class="text"><b>
-                            El descuento solo está disponible al pedir 2 paquetes de cápsulas por medio del formulario a
-                            continuación.
+                            Importante! El descuento solo está disponible si realiza un pedido a través del siguiente formulario.
                         </b></p>
                     <p class="text">
-                        Debido a la situación mundial actual y los problemas logísticos, <b>{{ product_name }}</b> se
+                        Debido a la situación mundial actual y los problemas logísticos, <a @click="form_scroll">{{ product_name }}</a> se
                         produce en
                         cantidades limitadas. Por tanto, si quiere empezar a tomar cápsulas lo antes posible, dese prisa
                         con tu pedido.
@@ -721,6 +729,11 @@ const product_name = window.lmt_config.product_name;
 </template>
 
 <style lang="scss">
+a {
+    font-weight: 700;
+    color: var(--link-text-color);
+    cursor: pointer;
+}
 .repl {
     color: var(--link-color);
 }
@@ -816,6 +829,7 @@ const product_name = window.lmt_config.product_name;
             color: var(--soft-text-color);
         }
     }
+
     &-block {
         &:last-of-type {
             .vote {
@@ -888,13 +902,24 @@ article {
 
         .article-image {
             width: 100%;
+            border: 1px solid #fff;
+            box-shadow: 0 0 5px var(--floating-box-shadow-color);
+            max-width: 502px;
+            margin: 0 auto;
+
+            margin-bottom: 25px;
+
+            .aiannot {
+                text-align: center;
+                line-height: 2;
+                margin: 0;
+                font-size: 14px;
+                font-weight: 700;
+            }
 
             img {
                 width: 100%;
-                max-width: 502px;
-                margin: 0 auto;
                 display: block;
-                margin-bottom: 25px;
             }
         }
 

@@ -89,8 +89,7 @@ const tel_input_handler = function (event: Event) {
           placeholder="Su número de teléfono:" required />
         <button type="submit" @click.prevent="submit" class="submit-btn">PEDIR >></button>
         <p class="form-note-b">
-          Las solicitudes se aceptan y tramitan las 24 horas del día, los 7 días de la semana. El descuento sólo es
-          válido para <span>pedidos de 2 paquetes</span> o más a través del formulario anterior.
+          Las solicitudes se aceptan y tramitan las 24 horas del día, los 7 días de la semana. El descuento sólo está disponible si realiza un pedido a través de este formulario.
         </p>
       </form>
     </div>
