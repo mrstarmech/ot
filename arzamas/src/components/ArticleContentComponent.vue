@@ -1,210 +1,215 @@
 <script setup lang="ts">
 import ArticleImageComponent from "./ArticleImageComponent.vue";
+import scientist1 from "@/assets/scientist_1.jpg";
 import babulya from "@/assets/babulya.jpg";
+import clinicdesk1 from "@/assets/clinicdesk_1.jpg";
 import veins from "@/assets/veins.jpg";
-import vnucha from "@/assets/vnucha.jpg";
+import product from "@/assets/product.png";
+import podruga from "@/assets/podruga.jpg";
+import girl from "@/assets/girl.jpg";
+import man from "@/assets/man.jpg";
 const product_name = window.lmt_config.product_name;
+
+const scroll = () => {
+  document
+    .querySelector("#scroll-anchor-form")
+    ?.scrollIntoView({ behavior: "smooth" });
+};
 </script>
 
 <template>
   <section class="intro">
     <p class="text">
-      La Sra. Juliana Costa nació en 1893 y desde entonces ha vivido la
-      revolución, dos guerras mundiales y varias reformas e innovaciones. En los
-      libros de registro de nuestro país, es nombrada como la persona más
-      anciana: el 4 de mayo cumplió 123 años.
+      <b
+        >Se llama Julianna Totti y tiene 38 años. Trabaja como cardióloga
+        adjunta en un gran centro sanitario público de Barcelona. Su trabajo le
+        exige no sólo colaborar con el cardiólogo jefe, sino también participar
+        activamente en la investigación como parte del propio equipo del centro.
+        Y ha conseguido hacer un descubrimiento increíble en su campo: Julianne
+        ha encontrado una fórmula que funciona para eliminar el colesterol de
+        los vasos sanguíneos y, como resultado, deshacerse de los síntomas de la
+        hipertensión. Su calvario no estuvo exento de intriga, ya que el sujeto
+        era un amigo de 86 años de su abuela de 129 años</b
+      >
     </p>
+    <ArticleImageComponent :src="scientist1" alt="babulya" />
     <p class="text">
-      La longevidad de la Sra. Juliana supera no solo a sus pares sino también a
-      las generaciones de sus hijos.
-    </p>
-    <p class="text">
-      Realiza chequeos de salud regularmente, y cada año, el médico le dice una
-      sola cosa: Usted está bien y perfectamente saludable.
-    </p>
-    <ArticleImageComponent :src="babulya" alt="babulya" />
-    <p class="text">
-      Aunque ha vivido durante mucho tiempo, la Sra. Juliana rara vez sale de su
-      pueblo y siempre dice que no cuando sus hijos la invitan a sus ciudades o
-      mudarse a otro lugar. Sus hijos piensan que ella es demasiado anciana para
-      vivir en el pueblo. Sin embargo, la edad no significa nada para la
-      anciana.
-    </p>
-    <p class="text">
-      La Sra. Juliana vive en una pequeña casa con su hijo menor. Ella se
-      encarga sola de la casa. Además, tiene un gran jardín que todavía mantiene
-      con regularidad. Además, cría ganado, algunas vacas, cerdos y gallinas.
-      Ella todavía es lo suficientemente fuerte y saludable para hacerse cargo
-      de todo esto.
-    </p>
-    <p class="text">
-      Visitamos la casa de la señora para entrevistarla y preguntarle sobre su
-      secreto más importante: cómo estar saludable y vivir tanto tiempo. No
-      quisimos molestarla con demasiadas preguntas, fuimos directo al grano
-      preguntando cuál es exactamente el secreto que la mantiene saludable.
+      Sin embargo, nuestra corresponsal descubrió qué la impulsó a hacer esta
+      investigación y cómo la experiencia de su propia abuela ayudó a Julianne a
+      hacer este descubrimiento.
     </p>
   </section>
   <section class="interview">
     <p class="q">
-      <span class="author">Nancy Delgado (N.D.):</span> Doña Juliana, ha vivido
-      una vida muy larga y saludable. ¿Tiene un secreto para mantenerse
-      saludable?
+      <span class="author">José Perdiguez (J.P.):</span> ¡Julianne, hola! ¿Cuál
+      fue tu motivación cuando te invitaron a formar parte del grupo de estudio?
+      ¿Cuáles eran sus objetivos?
     </p>
     <p class="a">
-      <span class="babulya">Juliana Costa (J.C.):</span> Ya se lo he dicho a los
-      periodistas muchas veces (los periodistas la visitan a menudo) que todo se
-      debe a las limpiezas de mis vasos sanguíneos, algo que hago con
-      regularidad. Mi antiguo vecino, el maestro Singh, me dio una receta hace
-      muchos años. Era un curandero que vivía en el mismo pueblo. Gente de todo
-      el pueblo acudía a él en busca de tratamiento médico, incluso de otros
-      pueblos.
+      <span class="babulya">Julianna Totti (J.T.):</span> ¡Hola José! En
+      realidad, siempre intento aprender cosas nuevas en mi profesión, así que
+      cuando me enteré de la oportunidad de formar parte de un grupo en nuestro
+      centro, me presenté sin pensarlo demasiado. Para mí, no es sólo una
+      experiencia profesional, sino también una historia personal que me ayudó a
+      hacer un descubrimiento.
     </p>
     <p class="a">
-      Continuamos charlando hasta la noche. "Mi hermana mayor era viva en ese
-      momento. Tenía problemas de salud. Mis padres limpiaron sus vaso
-      sanguíneos y su salud se recuperó. Por eso, creemos firmemente que los
-      vasos sanguíneos son lo más importante para nuestra salud. Desde entonces,
-      nuestra familia presta más atención a la salud de los vasos sanguíneos.
-      Mis padres murieron a la edad de 87. Mi hermana mayor también vivió mucho
-      tiempo, pero no como yo, ella murió a los 95. También les aconsejo a mis
-      hijos y nietos que presten especial atención a la salud de sus vasos
-      sanguíneos.
+      <span class="author">J.P.:</span>
+      ¿Así que te motivó hacer esto por algo personal?
     </p>
     <p class="a">
-      Y dado que el secreto de la longevidad está en los vasos sanguíneos, la
-      limpieza regular de los vasos sanguíneos es muy importante. Pero
-      desafortunadamente, muchas personas no escucharon mis consejos y no
-      limpiaron sus vasos con regularidad, por eso no vivieron tanto.
-      Especialmente todos los jubilados que viven en este pueblo. Les gusta
-      tomar medicamentos y piensan que todos eso los ayudarán. Cuando visité la
-      casa de mi sobrino, me sorprendió mucho esa situación. Tenía 60 años, pero
-      ya se había enfermado. Todos los medicamentos que tomaba jugaron un papel
-      importante para llevarlo a ese lugar. Todas estas drogas están hechas de
-      productos químicos hoy en día. Sin embargo, si presta atención a la salud
-      de sus vasos sanguíneos, estará tan saludable como yo".
+      <span class="author">J.T.:</span>
+      Sí. Después de todo, vengo de Colombia, que es uno de los climas más
+      diversos de Sudamérica, y la gente de allí suele tener problemas
+      cardíacos. La presión arterial alta y la hipertensión son muy comunes
+      allí, especialmente después de la cuarta ola del coronavirus, los
+      problemas de los vasos sanguíneos son cada vez más comunes, no sólo en los
+      ancianos sino también en los jóvenes.
+    </p>
+    <ArticleImageComponent :src="clinicdesk1" :alt="'veins'" />
+    <p class="a">
+      Incluso aquí, en España, suelen llegar jóvenes de entre 30 y 40 años, en
+      los que se notan los efectos del covid-19 y su exuberante juventud. Las
+      personas acuden con dolores de cabeza, debilidad y fatiga severa, falta de
+      aire, fluctuación de la presión arterial. Esto es un problema y me
+      interesé en tratarlo y encontrar una solución cómoda para las personas con
+      estos problemas.
     </p>
     <p class="q">
-      <span class="author">N.D.:</span> Sra. Juliana, entonces, si una persona
-      tiene mala salud y limpia sus vasos sanguíneos, ¿vivirá más tiempo?
+      <span class="author">J.P.:</span> Permítame que le haga una observación,
+      pero usted sólo tiene 38 años, ¿no es así, y cree que tiene suficiente
+      experiencia en este campo?
     </p>
     <p class="a">
-      <span class="babulya">J.C.:</span> ¡Por supuesto! Nuestra sangre fluye en
-      nuestros vasos sanguíneos y nutre todos los órganos. Cuanto mejor
-      absorbamos la nutrición, más saludable será el cuerpo. La salud humana
-      depende directamente de la salud vascular. Pero los vasos sanguíneos
-      pueden ensuciarse con el paso del tiempo porque también puede haber
-      impurezas en la sangre, así como diversas sustancias que no se absorben,
-      lo que hace que los vasos sanguíneos se obstruyan o debiliten
-      gradualmente. La sangre no llegará a los órganos internos correctamente.
-      Como resultado, los órganos internos experimentarán varios problemas. Los
-      riñones, el estómago, el hígado o la vejiga se ven afectados por la mala
-      circulación sanguínea. Imagínese, si yo dejo de alimentar a las vacas, se
-      enfermarían inmediatamente, ¿no?
+      <span class="babulya">J.T.:</span> Sí, porque mi abuela vivió hasta los
+      129 años gracias a la limpieza vascular regular. La recuerdo de mis días
+      de infancia, era y sigue siendo vivaz, enérgica y libre de los síntomas
+      que mencioné anteriormente. Se podría decir que fue mi abuela la que me
+      ayudó a hacer este descubrimiento, me mostró el camino, y se lo agradezco.
     </p>
+    <ArticleImageComponent :src="babulya" alt="babulya" />
     <p class="a">
-      Si la circulación sanguínea mejora, los órganos se restaurarán. Las
-      personas que limpian sus vasos sanguíneos tal vez no vivan tanto como yo,
-      pero seguro que van vivir más. 4 años o quizás 10 años más. En la
-      antigüedad, cuando no existían las drogas químicas, todos eran tratados de
-      esta manera y todo el mundo tenía buena salud.
-    </p>
-    <p class="a">
-      Ah, me acuerdo de otra cosa. Una mujer de Bogotá me dijo una vez que su
-      esposo sufría de presión arterial alta y síntomas precoces de enfermedades
-      cardíacas. El médico les dijo que no viviría mucho tiempo. Entonces ella
-      me preguntó cómo mantenerse saludable y yo les aconsejé a los dos que
-      limpien sus vasos sanguíneos. Siguiendo mi consejo, toda la familia limpia
-      sus vasos sanguíneos. Desde entonces ya pasaron 10 años. Todavía está sano
-      y ya no tiene presión arterial alta. En cuanto a mí, este año todavía
-      puedo continuar celebrando mi cumpleaños.
-    </p>
-    <p class="a">
-      Los periodistas a menudo me preguntan sobre esto y siempre les cuento mi
-      secreto. Pero obviamente, nadie me escucha... ¡Es muy triste! Porque si
-      limpiamos nuestros vasos sanguíneos, podemos vivir más y lo más
-      importante, podemos ser más saludables! Si vives mucho pero tienes que
-      vivir con la enfermedad, no serás feliz.
+      <span class="author">Sra. Juliana K. (J.K.):</span> A menudo he dicho a
+      los periodistas (los periodistas la visitan a menudo) que todo es gracias
+      a la limpieza vascular que hago regularmente. Esta receta me la pasó mi
+      abuela. Era una sanadora. Incluso personas de otras ciudades acudían a
+      ella para recibir tratamiento.
     </p>
     <ArticleImageComponent
       :src="veins"
-      :alt="'veins'"
-      :annot="'El 93% de las enfermedades parten de la contaminación vascular: desde enfermedades intestinales hasta los problemas en la vista'"
+      alt="veins"
+      :annot="`&quot;Nuestra sangre fluye por los vasos sanguíneos y nutre todos nuestros órganos. Cuanto mejor comamos, más sano será el cuerpo. La salud de una persona está directamente relacionada con la salud de los vasos sanguíneos&quot;. (Miss Julianne)`"
     />
     <p class="q">
-      <span class="author">NC.:</span> ¿Cómo se limpian los vasos sanguíneos?
-      ¿Puedes compartir algunos consejos con nuestros lectores?
+      <span class="author">J.P.:</span> ¿Así que tu abuela consigue mantenerse
+      despierta y fuerte con la ayuda de las hierbas locales? ¿Podría compartir
+      una lista con los nombres de estas hierbas?
     </p>
     <p class="a">
-      <span class="babulya">J.C.:</span> En el pasado, yo hacia mi propia receta
-      con algunas hierbas. Iba al campo a juntar las hierbas, las secaba y las
-      preparo. Me hago la limpieza sanguínea cada 2 años. No hay que hacer mucho
-      más, esto ya es suficiente porque los vasos sanguíneos no se ensucian
-      rápidamente. Ahora ya no recojo las hierba porque es demasiado peligroso
-      para mí sola y aparte hay que esperar la estación adecuada para recoger
-      las hierbas.
+      <span class="babulya">J.T.:</span> (Sonriendo) La lista no es tan
+      importante, en realidad. Lo importante es que entre estas hierbas mi grupo
+      y yo logramos encontrar una determinada combinación que hacía que la
+      disolución del colesterol en los vasos sanguíneos fuera 3 veces más eficaz
+      que el tratamiento con las mismas hierbas.
     </p>
     <p class="a">
-      No preparo mi receta desde hace 15 años. Mi nieta, que vive en Alemania,
-      me envia uma fórmula por correo y limpio mi vasos sanguíneos con ese
-      producto. Funciona incluso mejor que las hierbas que yo misma preparaba.
-    </p>
-    <p class="q">
-      <span class="author">NC.:</span> ¿Cuál es el nombre de este producto?
+      <span class="author">J.P.:</span>
+      ¡Intrigante! Cuéntenos cómo realizó la investigación: ¿quiénes
+      participaron en los experimentos?
     </p>
     <p class="a">
-      <span class="babulya">J.C.:</span> No recuerdo el nombre pero tiene una
-      caja de color blanco y rojo. Te sugiero que le preguntes a mi nieta. Te
-      daré su número para que puedas llamarla tú. Ahora vive en Alemania...
-    </p>
-    <p class="text">
-      La Sra. Juliana buscó algo en su habitación. Luego sacó una hoja de papel
-      con el número de teléfono de su nieta.
-    </p>
-    <p class="text">
-      Siguiendo el consejo de la Sra. Juliana, llamamos a su nieta en Alemania y
-      le preguntamos sobre el producto. Al final resultó ser que su nieta es una
-      cardióloga muy especializada de Alemania. Nos confirmó que el producto que
-      mencionaba su abuela sí era una fórmula para limpiar y filtrar el
-      colesterol en los vasos sanguíneos. Sin embargo, el producto no es alemán,
-      y se llama <a>{{ product_name }}</a
-      >.
-    </p>
-    <p class="text">
-      No pudimos evitar preguntarle a su nieta sobre los efectos de
-      {{ product_name }} y cómo funciona, y los beneficios de la limpieza de
-      vasos sanguíneos para los ancianos.
+      <span class="author">J.T.:</span>
+      Mis colegas y yo tomamos las mismas hierbas de las que me había hablado mi
+      abuela, y también tomamos algunos otros remedios que supuestamente podían
+      diluir la sangre y realizar una función de limpieza. Empezamos a buscar
+      primero los elementos activos y luego a reunir varias combinaciones.
+      Resultó que algunos de ellos eran simplemente ineficaces, pero había una
+      serie de combinaciones y fórmulas que podían resolver el problema
+      vascular. A continuación, probamos a fondo el fármaco que habíamos creado
+      y creamos un lote para ensayos en humanos. Elegimos a varios candidatos de
+      diferentes edades, géneros y nacionalidades, y uno de ellos resultó ser un
+      "joven" amigo de mi abuela, que había cumplido recientemente 82 años.
     </p>
     <ArticleImageComponent
-      :src="vnucha"
-      :alt="'vnucha'"
-      :annot="'Catalina respondió nuestra llamada telefónica desde Alemania'"
+      :src="podruga"
+      :alt="`podruga`"
+      annot="Marianne F., de 86 años, lleva 4 semanas tomando el medicamento de prueba"
     />
-    <p class="text">
-      La limpieza de los vasos sanguíneos es muy importante para todos los que
-      desean tener una vida larga y saludable. Se recomienda a las personas con
-      enfermedades cardiovasculares, especialmente presión arterial alta, que se
-      sometan a una limpieza de vasos regularmente. Eliminar el colesterol de
-      los vasos sanguíneos es la clave para curar la presión arterial alta.
+    <ArticleImageComponent
+      :src="man"
+      :alt="`podruga`"
+      annot="Jacob X., de 39 años, lleva 2 semanas tomando el medicamento de prueba"
+    />
+    <ArticleImageComponent
+      :src="girl"
+      :alt="`podruga`"
+      annot="Evgeniya K., de 28 años, lleva 3 semanas tomando el medicamento de prueba"
+    />
+    <p class="a">
+      Nuestros candidatos tomaron el remedio durante una, dos y cuatro semanas
+      bajo nuestra supervisión. Y nos quedamos de piedra cuando recibimos la
+      respuesta de los sujetos.
     </p>
-    <p class="text">
-      Además, la limpieza de vasos sanguíneos también se prescribe para otras
-      enfermedades completamente ajenas a las cardiovasculares. Por ejemplo,
-      cuando tiene una enfermedad hepática o renal, los médicos a menudo
-      prescriben la limpieza de los vasos sanguíneos. Esta terapia aumenta la
-      eficacia del tratamiento de la enfermedad.
+    <p class="a">
+      <b>
+        La presión arterial y el pulso empezaron a normalizarse y estabilizarse,
+        el tinnitus se detuvo, las migrañas desaparecieron al cabo de dos
+        semanas y el sujeto de prueba masculino ni siquiera tuvo problemas de
+        potencia, dijo. Las niñas tenían menos dolores del síndrome
+        premenstrual, su sueño se normalizó y Donna Rosita, la amiga de mi
+        abuela, dejó de sufrir dolores de cabeza y se volvió incluso más
+        despierta que mi abuela.
+      </b>
     </p>
-    <p class="text">
-      <a>"{{ product_name }}"</a>, que también se fabrica en Colombia, ayuda a
-      eliminar el colesterol de los vasos sanguíneos en poco tiempo, en solo 14
-      días de tratamiento.
+    <p class="a">
+      <span class="author">J.P.:</span>
+      Esto es muy interesante. Lo más interesante es que cada persona se ve
+      afectada de forma diferente por el medicamento, pero ¿qué pasa si ese
+      medicamento tiene efectos secundarios? ¿Cuánto duran las pruebas?
     </p>
-    <p class="text">
-      El remedio contiene una sustancia especial llamada a-tocoferol que tiene
-      la capacidad de penetrar las moléculas de colesterol y destruirlas desde
-      adentro. Por lo tanto, la limpieza del colesterol en los vasos sanguíneos
-      se puede hacer de manera efectiva. Además de a-tocoferol, este producto
-      también contiene cerca de 50 vitaminas y micro y macro oligoelementos, que
-      son beneficiosos para el corazón.
+    <p class="a">
+      <span class="author">J.T.:</span>
+      Trabajamos en este proyecto durante unos dos años, probamos durante otros
+      seis meses, probamos lentamente porque sabíamos que se estaban gastando
+      grandes presupuestos para combatir los efectos de la pandemia, y sabíamos
+      por los resultados provisionales que tendríamos éxito, así que nos tomamos
+      nuestro tiempo. En cuanto a los efectos secundarios, el fármaco es
+      completamente inofensivo y no causa ningún efecto secundario ni en monos
+      ni en ratones, y nuestros sujetos de prueba no notaron ningún deterioro en
+      su salud.
+    </p>
+    <p class="a">
+      <span class="author">J.P.:</span>
+      Entonces, Juliana, dinos, ¿qué es esa medicina de la que hablas, ya tiene
+      nombre?
+    </p>
+    <p class="a">
+      <span class="author">J.T.:</span>
+      Sí, ya hemos obtenido una patente sobre la fórmula y luego nuestros socios
+      fabricantes han producido un lote de cápsulas que se venden en Colombia
+      con el nombre de “<b style="color:red" @click="scroll">{{ product_name }}</b
+      >”. Ahora se están produciendo activamente e incluso se pueden encargar.
+    </p>
+    <ArticleImageComponent
+      :style="`padding:25px; max-width: 400px`"
+      :src="product"
+    />
+    <p class="a">
+      <span class="author">J.P.:</span>
+      ¿Puede decirme más sobre lo que contienen las cápsulas de “<b
+        @click="scroll"
+        style="color:red"
+        >{{ product_name }}</b
+      >”?
+    </p>
+    <p class="a">
+      <span class="author">J.T.:</span>
+      El producto contiene una sustancia especial llamada a-tocoferol, que tiene
+      la capacidad de penetrar en las moléculas de colesterol y descomponerlas
+      desde el interior. De este modo, el colesterol puede eliminarse
+      eficazmente de los vasos sanguíneos. Además del a-tocoferol, este producto
+      contiene también unas 50 vitaminas y micro y macronutrientes buenos para
+      el corazón. La base de la composición consiste en:
     </p>
   </section>
   <section class="components">
@@ -212,7 +217,7 @@ const product_name = window.lmt_config.product_name;
       <tbody>
         <tr class="c3">
           <td class="c2" colspan="1" rowspan="1">
-            <p class="c0"><span class="c1"> Polvo de oliva </span></p>
+            <p class="c0"><span class="c1">Polvo de oliva</span></p>
           </td>
           <td class="c2" colspan="1" rowspan="1">
             <p class="c0">
@@ -229,7 +234,7 @@ const product_name = window.lmt_config.product_name;
         </tr>
         <tr class="c3">
           <td class="c2" colspan="1" rowspan="1">
-            <p class="c0"><span class="c1"> Limón en polvo </span></p>
+            <p class="c0"><span class="c1">Limón en polvo</span></p>
           </td>
           <td class="c2" colspan="1" rowspan="1">
             <p class="c0">
@@ -245,7 +250,7 @@ const product_name = window.lmt_config.product_name;
         </tr>
         <tr class="c3">
           <td class="c2" colspan="1" rowspan="1">
-            <p class="c0"><span class="c1"> Polvo de espino </span></p>
+            <p class="c0"><span class="c1">Polvo de espino</span></p>
           </td>
           <td class="c2" colspan="1" rowspan="1">
             <p class="c0">
@@ -261,7 +266,7 @@ const product_name = window.lmt_config.product_name;
         </tr>
         <tr class="c3">
           <td class="c2" colspan="1" rowspan="1">
-            <p class="c0"><span class="c1"> Vitamina B6 </span></p>
+            <p class="c0"><span class="c1">Vitamina B6</span></p>
           </td>
           <td class="c2" colspan="1" rowspan="1">
             <p class="c0">
@@ -278,7 +283,7 @@ const product_name = window.lmt_config.product_name;
         </tr>
         <tr class="c3">
           <td class="c2" colspan="1" rowspan="1">
-            <p class="c0"><span class="c1"> Omega 3 en polvo </span></p>
+            <p class="c0"><span class="c1">Omega 3 en polvo</span></p>
           </td>
           <td class="c2" colspan="1" rowspan="1">
             <p class="c0">
@@ -294,52 +299,38 @@ const product_name = window.lmt_config.product_name;
         </tr>
       </tbody>
     </table>
-    <p class="text">Y muchas otras sustancias.</p>
   </section>
   <section class="interview2">
     <p class="q">
-      <span class="author">N.D.:</span> Entonces, ¿dónde podemos encontrar
-      <a>"{{ product_name }}"</a>?
+      <span class="author">J.P.:</span> ¿Cómo podemos encontrar a
+      <b style="color:red" @click="scroll">{{ product_name }}</b> en Colombia? También tengo
+      familiares en Medellín que tienen problemas vasculares.
     </p>
     <p class="a">
-      <span class="babulya">J.C.:</span> Hasta donde yo sé, la única forma de
-      obtener este producto en nuestro país es a través de un programa de la
-      Instituto Colombiano de Salud. Este año, el Instituto no dio continuidad
-      al programa pero sé que se sigue distribuyendo el stock de los años
-      anteriores. Entonces, para todos aquellos que deseen limpiar sus vasos
-      sanguíneos con este producto, les sugiero que lo compren lo antes posible
-      para evitar quedarse sin.
+      <span class="babulya">J.T.:</span> Por lo que sé, ya se han organizado los
+      envíos a Colombia, ya que el programa del Instituto de Salud está en
+      marcha allí. Recomiendo a todos los que quieran aclarar sus gafas con este
+      producto que lo prueben, pero que se den prisa para no perderse un lote
+      con descuento del gobierno.
     </p>
     <p class="a">
-      Se ha realizado una encuesta entre quienes utilizan
-      <a>"{{ product_name }}"</a>. El fabricante les pidió a quienes recibieron
-      el producto que participaran en una encuesta sobre la mejora de su salud.
-      El número de participantes en esta encuesta fue de casi 5.000 voluntarios.
+      <span class="author">J.P.:</span>
+      ¡Gracias, Julianne!
     </p>
-  </section>
-  <section class="attention">
-    <p class="text">¡Atención por favor!</p>
-    <ul class="text">
-      <li>
-        Nivel de azúcar en sangre completamente equilibrado (presión arterial
-        normal): 98% de las personas encuestadas
-      </li>
-      <li>Ritmo cardíaco normal - 97% de las personas encuestadas</li>
-      <li>Dolor de cabeza inexistente - 99% de las personas encuestadas</li>
-      <li>Visión mejorada - 74% de las personas encuestadas</li>
-      <li>
-        Mayor eficacia en el tratamiento de enfermedades crónicas - 92% de las
-        personas encuestadas
-      </li>
-      <li>Salud general mejorada - 99% de las personas encuestadas</li>
-    </ul>
+    <p class="a">
+      <span class="author">J.T.:</span>
+      ¡Y gracias por la oportunidad de difundir la palabra sobre
+      <b style="color:red" @click="scroll">{{ product_name }}</b
+      >! ¡Buena salud para ti y tus seres queridos!
+    </p>
   </section>
 </template>
 
 <style lang="scss">
 section {
-  line-height: 1.5;
+  line-height: 29px;
 }
+
 .intro {
   font-family: var(--font-mont);
   font-size: var(--main-text-size);

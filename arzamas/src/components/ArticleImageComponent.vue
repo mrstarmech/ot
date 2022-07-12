@@ -19,7 +19,7 @@ defineProps({
 .article-image {
   max-width: 1000px;
   font-family: var(--font-mont);
-  margin: 0 auto;
+  margin: 0 auto 10px;
   box-shadow: 0 0 6px var(--pale-main-color);
   padding: 1px;
   img {
@@ -27,7 +27,7 @@ defineProps({
     width: 100%;
   }
   .image-annot {
-    font-size: 0.75em;
+    font-size: var(--small-text-size);
     font-weight: 700;
     text-align: center;
     padding: 0 5px;

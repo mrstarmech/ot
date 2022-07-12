@@ -36,9 +36,25 @@ onMounted(() => {
       }
     });
   });
+  const observer2 = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add("ringing");
+        } else {
+          e.target.classList.remove("ringing");
+        }
+      });
+    },
+    {
+      threshold: 0.5,
+    }
+  );
   setTimeout(() => {
     const el = document.querySelector("#timer");
+    const fel = document.querySelector(".order-form-btn");
     if (el !== null) observer.observe(el);
+    if (fel) observer2.observe(fel);
   }, 1000);
   setInterval(() => {
     if (!timer.isLoading) {
@@ -67,7 +83,7 @@ const btn_click = function () {
       Cómprelo a un precio promocional antes de que esta oferta pase al próximo
       lector!
     </p>
-    <button @click="btn_click" class="order-form-btn">
+    <button @click="btn_click" :ref="`form_btn`" class="order-form-btn">
       Compre con un 50% de descuento
     </button>
     <p ref="timer_block" id="timer" class="timer">
@@ -88,6 +104,33 @@ const btn_click = function () {
 <style lang="scss">
 .hidden {
   display: none !important;
+}
+
+.ringing {
+  animation: ringing 1s linear;
+}
+
+@keyframes ringing {
+  0% {
+  }
+
+  5%,
+  15% {
+    transform: rotate(15deg);
+  }
+
+  10%,
+  20% {
+    transform: rotate(-15deg);
+  }
+
+  25% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 @keyframes spinner {
@@ -127,7 +170,6 @@ const btn_click = function () {
 }
 
 #scroll-anchor-form {
-  height: 20px;
   width: 100%;
 }
 
@@ -211,7 +253,7 @@ const btn_click = function () {
   border-radius: 200px;
   border: 0;
   color: #fff;
-  font-family: "Roboto";
+  font-family: var(--font-pt);
   font-weight: 700;
   font-size: 24px;
   width: 300px;

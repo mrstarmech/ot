@@ -14,7 +14,7 @@ function close() {
 
 <template>
   <HeaderComponent />
-  <ArticleComponent @show_fomr="modal_shown.state = true" />
+  <ArticleComponent @show_form="modal_shown.state = true" />
   <CommentsComponent @show_form="modal_shown.state = true" />
   <PopUpComponent />
   <OrderFormModal v-if="modal_shown.state" @close="close" />

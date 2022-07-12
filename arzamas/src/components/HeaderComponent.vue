@@ -13,7 +13,7 @@
 .page-header {
   display: flex;
   justify-content: space-between;
-  background-color: var(--main-color);
+  background-color: #2a6ebb;
   animation: header-in 0.5s ease-in-out;
 
   &__item {

@@ -2,10 +2,13 @@
 
 <template>
   <header class="article-head">
-    <h1 class="article-head__title">Ahora quiero vivir hasta los 150 años</h1>
+    <h1 class="article-head__title">
+      Presión arterial de 120/80 para siempre: cómo un destacado cardiólogo
+      español encontró una forma única de limpiar los vasos sanguíneos
+    </h1>
     <h4 class="article-head__sub-title">
-      La historia de una mujer increíble sobre el secreto de su salud, y por qué
-      ese secreto ya no es un secreto
+      La historia de un joven científico que descubre una fórmula eficaz para
+      limpiar los vasos sanguíneos sin siquiera darse cuenta
     </h4>
     <h5 class="article-head__author">Grabado por <i>Nancy Delgado</i></h5>
     <!-- <SocialBlockComponent /> -->
@@ -17,9 +20,9 @@
   &__title {
     font-family: var(--font-pt);
     text-align: center;
-    font-size: 2.5em;
+    font-size: 30px;
     @media screen and (min-width: 426px) {
-      font-size: 3.5em;
+      font-size: 40px;
     }
   }
   &__sub-title {

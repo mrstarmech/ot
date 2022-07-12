@@ -2,7 +2,7 @@
 import ArticleHeadComponent from "./ArticleHeadComponent.vue";
 import ArticleContentComponent from "./ArticleContentComponent.vue";
 import FormComponent from "./FormComponent.vue";
-const emit = defineEmits(["show_fomr"]);
+const emit = defineEmits(["show_form"]);
 </script>
 
 <template>
@@ -11,7 +11,7 @@ const emit = defineEmits(["show_fomr"]);
       <ArticleHeadComponent />
       <ArticleContentComponent />
     </article>
-    <FormComponent @show_form="emit('show_fomr')" />
+    <FormComponent @show_form="emit('show_form')" />
   </div>
 </template>
 
