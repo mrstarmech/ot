@@ -20,8 +20,7 @@ const scroll = () => {
 <template>
   <section class="intro">
     <p class="text">
-      <b
-        >Se llama Julianna Totti y tiene 38 años. Trabaja como cardióloga
+      <b>Se llama Julianna Totti y tiene 38 años. Trabaja como cardióloga
         adjunta en un gran centro sanitario público de Barcelona. Su trabajo le
         exige no sólo colaborar con el cardiólogo jefe, sino también participar
         activamente en la investigación como parte del propio equipo del centro.
@@ -29,8 +28,7 @@ const scroll = () => {
         ha encontrado una fórmula que funciona para eliminar el colesterol de
         los vasos sanguíneos y, como resultado, deshacerse de los síntomas de la
         hipertensión. Su calvario no estuvo exento de intriga, ya que el sujeto
-        era un amigo de 86 años de su abuela de 129 años</b
-      >
+        era un amigo de 86 años de su abuela de 129 años</b>
     </p>
     <ArticleImageComponent :src="scientist1" alt="babulya" />
     <p class="text">
@@ -95,11 +93,8 @@ const scroll = () => {
       abuela. Era una sanadora. Incluso personas de otras ciudades acudían a
       ella para recibir tratamiento.
     </p>
-    <ArticleImageComponent
-      :src="veins"
-      alt="veins"
-      :annot="`&quot;Nuestra sangre fluye por los vasos sanguíneos y nutre todos nuestros órganos. Cuanto mejor comamos, más sano será el cuerpo. La salud de una persona está directamente relacionada con la salud de los vasos sanguíneos&quot;. (Miss Julianne)`"
-    />
+    <ArticleImageComponent :src="veins" alt="veins"
+      :annot="`&quot;Nuestra sangre fluye por los vasos sanguíneos y nutre todos nuestros órganos. Cuanto mejor comamos, más sano será el cuerpo. La salud de una persona está directamente relacionada con la salud de los vasos sanguíneos&quot;. (Miss Julianne)`" />
     <p class="q">
       <span class="author">J.P.:</span> ¿Así que tu abuela consigue mantenerse
       despierta y fuerte con la ayuda de las hierbas locales? ¿Podría compartir
@@ -130,21 +125,12 @@ const scroll = () => {
       diferentes edades, géneros y nacionalidades, y uno de ellos resultó ser un
       "joven" amigo de mi abuela, que había cumplido recientemente 82 años.
     </p>
-    <ArticleImageComponent
-      :src="podruga"
-      :alt="`podruga`"
-      annot="Marianne F., de 86 años, lleva 4 semanas tomando el medicamento de prueba"
-    />
-    <ArticleImageComponent
-      :src="man"
-      :alt="`podruga`"
-      annot="Jacob X., de 39 años, lleva 2 semanas tomando el medicamento de prueba"
-    />
-    <ArticleImageComponent
-      :src="girl"
-      :alt="`podruga`"
-      annot="Evgeniya K., de 28 años, lleva 3 semanas tomando el medicamento de prueba"
-    />
+    <ArticleImageComponent :src="podruga" :alt="`podruga`"
+      annot="Marianne F., de 86 años, lleva 4 semanas tomando el medicamento de prueba" />
+    <ArticleImageComponent :src="man" :alt="`podruga`"
+      annot="Jacob X., de 39 años, lleva 2 semanas tomando el medicamento de prueba" />
+    <ArticleImageComponent :src="girl" :alt="`podruga`"
+      annot="Evgeniya K., de 28 años, lleva 3 semanas tomando el medicamento de prueba" />
     <p class="a">
       Nuestros candidatos tomaron el remedio durante una, dos y cuatro semanas
       bajo nuestra supervisión. Y nos quedamos de piedra cuando recibimos la
@@ -187,20 +173,14 @@ const scroll = () => {
       <span class="author">J.T.:</span>
       Sí, ya hemos obtenido una patente sobre la fórmula y luego nuestros socios
       fabricantes han producido un lote de cápsulas que se venden en Colombia
-      con el nombre de “<b style="color:red" @click="scroll">{{ product_name }}</b
-      >”. Ahora se están produciendo activamente e incluso se pueden encargar.
+      con el nombre de “<b style="color:red" @click="scroll">{{ product_name }}</b>”. Ahora se están produciendo
+      activamente e incluso se pueden encargar.
     </p>
-    <ArticleImageComponent
-      :style="`padding:25px; max-width: 400px`"
-      :src="product"
-    />
+    <ArticleImageComponent :style="`padding:25px; max-width: 400px`" :src="product" />
     <p class="a">
       <span class="author">J.P.:</span>
-      ¿Puede decirme más sobre lo que contienen las cápsulas de “<b
-        @click="scroll"
-        style="color:red"
-        >{{ product_name }}</b
-      >”?
+      ¿Puede decirme más sobre lo que contienen las cápsulas de “<b @click="scroll" style="color:red">{{ product_name
+      }}</b>”?
     </p>
     <p class="a">
       <span class="author">J.T.:</span>
@@ -307,11 +287,10 @@ const scroll = () => {
       familiares en Medellín que tienen problemas vasculares.
     </p>
     <p class="a">
-      <span class="babulya">J.T.:</span> Por lo que sé, ya se han organizado los
-      envíos a Colombia, ya que el programa del Instituto de Salud está en
-      marcha allí. Recomiendo a todos los que quieran aclarar sus gafas con este
-      producto que lo prueben, pero que se den prisa para no perderse un lote
-      con descuento del gobierno.
+      <span class="babulya">J.T.:</span> Ya se han organizado las entregas a Colombia, ya que el programa del Instituto
+      de Salud se está aplicando allí. Recomiendo a todo el mundo que limpie sus vasos sanguíneos sólo con este
+      producto, pero date prisa para no perder el envío con descuento del gobierno. Puede hacer su pedido a través del
+      sitio web oficial de <b style="color:red" @click="scroll">{{ product_name }}</b>
     </p>
     <p class="a">
       <span class="author">J.P.:</span>
@@ -320,8 +299,7 @@ const scroll = () => {
     <p class="a">
       <span class="author">J.T.:</span>
       ¡Y gracias por la oportunidad de difundir la palabra sobre
-      <b style="color:red" @click="scroll">{{ product_name }}</b
-      >! ¡Buena salud para ti y tus seres queridos!
+      <b style="color:red" @click="scroll">{{ product_name }}</b>! ¡Buena salud para ti y tus seres queridos!
     </p>
   </section>
 </template>

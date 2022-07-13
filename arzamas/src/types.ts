@@ -6,10 +6,10 @@ declare global {
       offer_link: string;
       modal_shown: boolean;
       name_pattern: RegExp;
-      tel_pattern: RegExp;
+      phone_pattern: RegExp;
       form_params: object;
       validity: {
-        tel_error: "";
+        phone_error: "";
         name_error: "";
       };
     };

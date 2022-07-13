@@ -7,9 +7,9 @@
       product_name: "Procardi",
       //product_image: 'assets/product.cc580d91.png',
       modal_shown: false,
-      name_pattern: new RegExp(/[aábcdeéfghijklmnñoópqrstuúüvwxyzAÁBCDEÉFGHIJKLMNÑOÓPQRSTUÚÜVWXYZ\s]{3,}/),
-      tel_pattern: new RegExp(/\+{0,1}57[\d]{10}/),
       form_params: {
+        name_pattern: new RegExp(/[aábcdeéfghijklmnñoópqrstuúüvwxyzAÁBCDEÉFGHIJKLMNÑOÓPQRSTUÚÜVWXYZ\s]{3,}/),
+        phone_pattern: new RegExp(/\+{0,1}57[\d]{10}/),
         flow_id: '<?=getParam("flow_id")?>',
         geo: '<?=getParam("flow_geo")?>',
         sub1: '<?=getParam("sub1")?>',

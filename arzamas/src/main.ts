@@ -12,10 +12,10 @@ if (typeof window.lmt_config === "undefined") {
     offer_link: "https://example.com",
     modal_shown: false,
     name_pattern: /.*/,
-    tel_pattern: /.*/,
+    phone_pattern: /.*/,
     form_params: {},
     validity: {
-      tel_error: "",
+      phone_error: "",
       name_error: "",
     },
   };

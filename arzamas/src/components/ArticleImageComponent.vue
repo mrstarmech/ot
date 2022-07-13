@@ -17,7 +17,7 @@ defineProps({
 
 <style lang="scss">
 .article-image {
-  max-width: 1000px;
+  max-width: 700px;
   font-family: var(--font-mont);
   margin: 0 auto 10px;
   box-shadow: 0 0 6px var(--pale-main-color);

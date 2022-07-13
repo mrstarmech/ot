@@ -31,8 +31,8 @@ const submit = function () {
     return;
   }
 
-  if (!validate_input(tel_input.val, window.lmt_config.tel_pattern)) {
-    _tel_input.setCustomValidity(window.lmt_config.validity.tel_error);
+  if (!validate_input(tel_input.val, window.lmt_config.phone_pattern)) {
+    _tel_input.setCustomValidity(window.lmt_config.validity.phone_error);
     _tel_input.reportValidity();
     return;
   }
@@ -159,7 +159,7 @@ const tel_input_handler = function (event: Event) {
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .modal-cross1 {
   position: absolute;
   width: 60px;

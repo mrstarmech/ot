@@ -20,7 +20,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faArrowsSpin } from "@fortawesome/free-solid-svg-icons";
 library.add(faArrowsSpin);
-const emit = defineEmits(["show_form"]);
+const emit = defineEmits(["show_form","show_form2"]);
 const loader = reactive({ state: true });
 const product_name = window.lmt_config.product_name;
 onMounted(() => {
@@ -54,30 +54,30 @@ onMounted(() => {
       <div class="article__text myarticle-comment">
         <div class="comment-user">
           <p class="user-name">
-            <a @click="emit('show_form')">Clara F.</a>
+            <a @click="emit('show_form2')">Clara F.</a>
             <!-- <span class="mycity">México</span> -->
           </p>
-          <a @click="emit('show_form')"><img :src="i1" alt="" /></a>
+          <a @click="emit('show_form2')"><img :src="i1" alt="" /></a>
           <p>
             ¡Gracias! El artículo es muy interesante. Ya he hecho mi pedido de
-            <a @click="emit('show_form')">{{ product_name }}</a
+            <a @click="emit('show_form2')">{{ product_name }}</a
             >.
           </p>
         </div>
         <div class="comment-user">
           <p class="user-name">
-            <a @click="emit('show_form')">Raúl</a>
+            <a @click="emit('show_form2')">Raúl</a>
             <!-- <span class="mycity">Guadalajara</span> -->
           </p>
-          <a @click="emit('show_form')"><img :src="i2" alt="" /></a>
+          <a @click="emit('show_form2')"><img :src="i2" alt="" /></a>
           <p>
             Ya he comprado y probado
-            <a @click="emit('show_form')">{{ product_name }}</a
+            <a @click="emit('show_form2')">{{ product_name }}</a
             >. Sufro de presión arterial alta desde hace 7 años. Ya no recuerdo
             aquellos momentos de mi vida en que tenía la presión arterial
             normal. Por recomendación del médico, decidí que tenía que limpiar
             mis vasos. Después de un mes de tratamiento con
-            <a @click="emit('show_form')">{{ product_name }}</a
+            <a @click="emit('show_form2')">{{ product_name }}</a
             >, mi presión arterial recuperó valores normales. Ya han pasado 2
             meses desde que no tengo la presión arterial alta. Ahora mi vida es
             diferente. Me siento mil veces mejor. Recomiendo este excelente
@@ -91,24 +91,24 @@ onMounted(() => {
         </div>
         <div class="comment-user">
           <p class="user-name">
-            <a @click="emit('show_form')">Alex</a>
+            <a @click="emit('show_form2')">Alex</a>
             <!-- <span class="mycity">Chihuahua</span> -->
           </p>
-          <a @click="emit('show_form')"><img :src="i3" alt="" /></a>
+          <a @click="emit('show_form2')"><img :src="i3" alt="" /></a>
           <p>
             Yo también me he tratado durante un mes con
-            <a @click="emit('show_form')">{{ product_name }}</a
+            <a @click="emit('show_form2')">{{ product_name }}</a
             >. Me siento más saludable y más fuerte. Me siento más joven.
           </p>
         </div>
         <div class="comment-user">
           <p class="user-name">
-            <a @click="emit('show_form')">Laura</a>
+            <a @click="emit('show_form2')">Laura</a>
             <span class="mycity">
-              <!-- <a @click="emit('show_form')">México</a></span> -->
+              <!-- <a @click="emit('show_form2')">México</a></span> -->
             </span>
           </p>
-          <a @click="emit('show_form')"><img :src="i4" alt="" /></a>
+          <a @click="emit('show_form2')"><img :src="i4" alt="" /></a>
           <p>
             Gracias. Ya lo he pedido. Me gusta el hecho de que realicen envíos
             por correo a todas partes.
@@ -116,10 +116,10 @@ onMounted(() => {
         </div>
         <div class="comment-user" style="display: table">
           <p class="user-name">
-            <a @click="emit('show_form')">Jaime</a>
-            <!-- <span class="mycity"><a @click="emit('show_form')">Puebla</a></span> -->
+            <a @click="emit('show_form2')">Jaime</a>
+            <!-- <span class="mycity"><a @click="emit('show_form2')">Puebla</a></span> -->
           </p>
-          <a @click="emit('show_form')"><img :src="i5" alt="" /></a>
+          <a @click="emit('show_form2')"><img :src="i5" alt="" /></a>
           <p>
             El paquete me llegó ayer. Así es el producto. Voy a hacer el
             tratamiento de limpieza con mi esposa. Nos hemos hecho unas pruebas
@@ -134,13 +134,13 @@ onMounted(() => {
         </div>
         <div class="comment-user">
           <p class="user-name">
-            <a @click="emit('show_form')">Amelia</a>
-            <!-- <span class="mycity"><a @click="emit('show_form')">Guadalajara</a></span> -->
+            <a @click="emit('show_form2')">Amelia</a>
+            <!-- <span class="mycity"><a @click="emit('show_form2')">Guadalajara</a></span> -->
           </p>
-          <a @click="emit('show_form')"><img :src="i6" alt="" /></a>
+          <a @click="emit('show_form2')"><img :src="i6" alt="" /></a>
           <p>
             Hace un mes que comencé el tratamiento con
-            <a @click="emit('show_form')">{{ product_name }}</a
+            <a @click="emit('show_form2')">{{ product_name }}</a
             >. A veces, tenía la presión arterial alta y el ritmo cardíaco
             irregular. Ya llevo usándolo 2 semanas. Mi presión arterial ha
             vuelto a la normalidad. Me siento completamente sana.
@@ -148,10 +148,10 @@ onMounted(() => {
         </div>
         <div class="comment-user">
           <p class="user-name">
-            <a @click="emit('show_form')">Cristina</a>
-            <!-- <span class="mycity"><a @click="emit('show_form')">Cancún</a></span> -->
+            <a @click="emit('show_form2')">Cristina</a>
+            <!-- <span class="mycity"><a @click="emit('show_form2')">Cancún</a></span> -->
           </p>
-          <a @click="emit('show_form')"><img :src="i7" alt="" /></a>
+          <a @click="emit('show_form2')"><img :src="i7" alt="" /></a>
           <p>
             Tengo 61 años. Llevo haciéndome tratamientos para limpiar los vasos
             desde hace 5 años. Me ayudan a conservar mi salud y me dan fuerzas.
@@ -162,26 +162,26 @@ onMounted(() => {
         </div>
         <div class="comment-user" style="display: table">
           <p class="user-name">
-            <a @click="emit('show_form')">María del Carmen</a>
+            <a @click="emit('show_form2')">María del Carmen</a>
             <!-- <span class="mycity">Ciudad Juárez</span> -->
           </p>
-          <a @click="emit('show_form')"><img :src="i8" alt="" /></a>
+          <a @click="emit('show_form2')"><img :src="i8" alt="" /></a>
           <p>
             He tratado mi presión arterial alta con este medicamento. Llevaba
             muchos años sufriendo por ello. Con el tiempo, también desarrollé
             diabetes y problemas renales. Trastornos de la memoria y la vista.
             Me hice un montón de tratamientos que no sirvieron para nada. Decidí
-            probar <a @click="emit('show_form')">{{ product_name }}</a
+            probar <a @click="emit('show_form2')">{{ product_name }}</a
             >. Fue la primera vez que pedía medicamentos por Internet. Resultó
             ser muy sencillo.
           </p>
         </div>
         <div class="comment-user">
           <p class="user-name">
-            <a @click="emit('show_form')">Raquel</a>
-            <!-- <span class="mycity"><a @click="emit('show_form')">Oaxaca</a></span> -->
+            <a @click="emit('show_form2')">Raquel</a>
+            <!-- <span class="mycity"><a @click="emit('show_form2')">Oaxaca</a></span> -->
           </p>
-          <a @click="emit('show_form')"><img :src="i9" alt="" /></a>
+          <a @click="emit('show_form2')"><img :src="i9" alt="" /></a>
           <p>
             ¡Gracias! He visto un programa de televisión en el que hablaban de
             este producto. Todos los médicos lo recomendaban. Afirmaban que
@@ -191,10 +191,10 @@ onMounted(() => {
         </div>
         <div class="comment-user">
           <p class="user-name">
-            <a @click="emit('show_form')">Alfredo</a>
+            <a @click="emit('show_form2')">Alfredo</a>
             <!-- <span class="mycity">Puebla</span> -->
           </p>
-          <a @click="emit('show_form')"><img :src="i10" alt="" /></a>
+          <a @click="emit('show_form2')"><img :src="i10" alt="" /></a>
           <p>
             ¡Este producto es altamente efectivo! ¡Doy fe! He tenido una presión
             arterial de 140/90 durante años. Después del tratamiento, mi presión
@@ -203,31 +203,31 @@ onMounted(() => {
         </div>
         <div class="comment-user">
           <p class="user-name">
-            <a @click="emit('show_form')">Macarena</a>
+            <a @click="emit('show_form2')">Macarena</a>
             <!-- <span class="mycity">Mérida</span> -->
           </p>
-          <a @click="emit('show_form')"><img :src="i11" alt="" /></a>
+          <a @click="emit('show_form2')"><img :src="i11" alt="" /></a>
           <p>
             He leído toda la información sobre
-            <a @click="emit('show_form')">{{ product_name }}</a> en
-            <a @click="emit('show_form')"> su sitio web</a>. ¡Me ha parecido
+            <a @click="emit('show_form2')">{{ product_name }}</a> en
+            <a @click="emit('show_form2')"> su sitio web</a>. ¡Me ha parecido
             sorprendente e impresionante!
           </p>
         </div>
         <div class="comment-user">
           <p class="user-name">
-            <a @click="emit('show_form')">Juan S.</a>
+            <a @click="emit('show_form2')">Juan S.</a>
             <!-- <span class="mycity">México</span> -->
           </p>
-          <a @click="emit('show_form')"><img :src="i12" alt="" /></a>
+          <a @click="emit('show_form2')"><img :src="i12" alt="" /></a>
           <p>¡He conseguido la oferta! ¡Gracias!</p>
         </div>
         <div class="comment-user" style="display: table">
           <p class="user-name">
-            <a @click="emit('show_form')">Víctor</a>
+            <a @click="emit('show_form2')">Víctor</a>
             <!-- <span class="mycity">Tijuana</span> -->
           </p>
-          <a @click="emit('show_form')"><img :src="i13" alt="" /></a>
+          <a @click="emit('show_form2')"><img :src="i13" alt="" /></a>
           <p>
             Yo también seguí el tratamiento durante un mes (de forma
             interrumpida). Me siento mejor. Estoy repleto de fuerza y energía y
@@ -237,13 +237,13 @@ onMounted(() => {
         </div>
         <div class="comment-user">
           <p class="user-name">
-            <a @click="emit('show_form')">Lorena</a>
+            <a @click="emit('show_form2')">Lorena</a>
             <!-- <span class="mycity">México</span> -->
           </p>
-          <a @click="emit('show_form')"><img :src="i14" alt="" /></a>
+          <a @click="emit('show_form2')"><img :src="i14" alt="" /></a>
           <p>
             Hace dos meses, yo también completé el tratamiento de limpieza con
-            <a @click="emit('show_form')">{{ product_name }}</a
+            <a @click="emit('show_form2')">{{ product_name }}</a
             >. Cuando tenía los vasos obstruidos, siempre me sentía muy cansada,
             pero ahora tengo mucha energía. Consigo hacer más cosas durante el
             día. Antes tenía fuertes dolores de cabeza, ahora han desaparecido.
@@ -253,7 +253,7 @@ onMounted(() => {
         </div>
         <br />
       </div>
-      <button @click="emit('show_form')" class="order-btn">
+      <button @click="emit('show_form2')" class="order-btn">
         CÓMPRELO AHORA
       </button>
     </div>
