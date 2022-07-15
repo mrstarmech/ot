@@ -349,12 +349,6 @@ form#order-form {
         cursor: pointer;
         font-family: var(--font-mont);
 
-        &:disabled {
-            background-color: rgba(239, 239, 239, 0.3);
-            color: rgba(16, 16, 16, 0.3);
-            border-color: rgba(118, 118, 118, 0.3);
-        }
-
         &.blink {
             animation: error_blink_btn 1s;
         }
