@@ -1,0 +1,13 @@
+:root {
+    --main-color: #000;
+    --pale-main-color: rgba(0,0,0,0.2);
+    --font-pt: 'Roboto Condensed', sans-serif;
+    --font-mont: 'Inter', sans-serif;
+    --main-text-size: 20px;
+    --small-text-size: .875em;
+    --link-color: #1000ff;
+}
+
+* {
+    box-sizing: border-box;
+}
