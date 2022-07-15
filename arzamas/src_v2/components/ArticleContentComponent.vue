@@ -30,7 +30,7 @@ const scroll = () => {
         hipertensión. Su calvario no estuvo exento de intriga, ya que el sujeto
         era un amigo de 86 años de su abuela de 129 años</b>
     </p>
-    <ArticleImageComponent :src="scientist1" />
+    <ArticleImageComponent :src="scientist1" alt="babulya" />
     <p class="text">
       Sin embargo, nuestra corresponsal descubrió qué la impulsó a hacer esta
       investigación y cómo la experiencia de su propia abuela ayudó a Julianne a

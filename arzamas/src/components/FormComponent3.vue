@@ -99,30 +99,11 @@ onMounted(() => {
                 <span class="al-cost-test">129000 COP</span>
             </div>
         </div>
-        <form ref="order_form" action="/send/send_1.php" id="order-form">
-            <input type="hidden" id="geo" name="geo" :value="getParamFromConfig('geo')" />
-            <input type="hidden" id="flow_id" name="flow_id" :value="getParamFromConfig('flow_id')" />
-            <input type="hidden" id="sub1" name="sub1" :value="getParamFromConfig('sub1')" />
-            <input type="hidden" id="sub2" name="sub2" :value="getParamFromConfig('sub2')" />
-            <input type="hidden" id="sub3" name="sub3" :value="getParamFromConfig('sub3')" />
-            <input type="hidden" id="sub4" name="sub4" :value="getParamFromConfig('sub4')" />
-            <input type="hidden" id="sub5" name="sub5" :value="getParamFromConfig('sub5')" />
-            <div class="timer">{{ time.value }}</div>
-            <div class="input-group">
-                <label for="name">Nome/Cognome</label>
-                <input ref="name_input" @focus="focus_form" @input="handle_name_input" type="text" name="name" id="name"
-                    v-model="name.val" required autocomplete="off" minlength="3" placeholder="Nombre">
-                <pre v-if="name_error.value" ref="error_name">{{ name_error_message.value }}</pre>
-                <pre v-else></pre>
-            </div>
-            <div class="input-group">
-                <label for="phone">Mob.telefono</label>
-                <input ref="phone_input" @focus="focus_form" @input="handle_phone_input" type="tel" name="phone"
-                    id="phone" v-model="phone.val" required autocomplete="off" maxlength="13">
-                <pre v-if="phone_error.value" ref="error_name">{{ phone_error_message.value }}</pre>
-                <pre v-else></pre>
-            </div>
-            <button id="submitBtn" :disabled="name_error.value || phone_error.value ? true : false" type="submit">PEDIR
+        <form ref="order_form" :action="getParamFromConfig('offer_link')" id="order-form">
+        <br>
+                <div class="timer">{{time.value}}</div>
+        <br>
+            <button id="submitBtn" type="submit">PEDIR
                 >></button>
             <p><b>
                     El número de productos de oferta es limitado. los descuentos todavía están disponibles

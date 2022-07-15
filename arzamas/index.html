@@ -11,12 +11,13 @@
         name_pattern: new RegExp(/[aábcdeéfghijklmnñoópqrstuúüvwxyzAÁBCDEÉFGHIJKLMNÑOÓPQRSTUÚÜVWXYZ\s]{3,}/),
         phone_pattern: new RegExp(/\+{0,1}57[\d]{10}/),
         flow_id: '<?=getParam("flow_id")?>',
-        geo: '<?=getParam("flow_geo")?>',
+        geo: '<?=getParam("geo")?>',
         sub1: '<?=getParam("sub1")?>',
         sub2: '<?=getParam("sub2")?>',
         sub3: '<?=getParam("sub3")?>',
         sub4: '<?=getParam("sub4")?>',
-        sub5: '<?=getParam("sub5")?>'
+        sub5: '<?=getParam("sub5")?>',
+        offer_link: '<?=$offerLink?>'
       },
       validity: {
         name_error: 'Please use only latin letters',
