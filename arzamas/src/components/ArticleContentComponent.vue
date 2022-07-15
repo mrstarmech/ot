@@ -19,6 +19,7 @@ const scroll = () => {
 
 <template>
   <section class="intro">
+    <ArticleImageComponent :src="scientist1" />
     <p class="text">
       <b>Se llama Julianna Totti y tiene 38 años. Trabaja como cardióloga
         adjunta en un gran centro sanitario público de Barcelona. Su trabajo le
@@ -30,7 +31,6 @@ const scroll = () => {
         hipertensión. Su calvario no estuvo exento de intriga, ya que el sujeto
         era un amigo de 86 años de su abuela de 129 años</b>
     </p>
-    <ArticleImageComponent :src="scientist1" />
     <p class="text">
       Sin embargo, nuestra corresponsal descubrió qué la impulsó a hacer esta
       investigación y cómo la experiencia de su propia abuela ayudó a Julianne a

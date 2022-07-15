@@ -10,7 +10,7 @@ export default defineConfig(({ command }) => {
   return {
     plugins: [
       vue(),
-      ViteWebfontDownload(),
+      //ViteWebfontDownload(),
       viteImagemin({
         gifsicle: {
           optimizationLevel: 7,
@@ -20,7 +20,7 @@ export default defineConfig(({ command }) => {
           optimizationLevel: 7,
         },
         mozjpeg: {
-          quality: 20,
+          quality: 40,
         },
         pngquant: {
           quality: [0.8, 0.9],
